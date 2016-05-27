@@ -1,9 +1,10 @@
 import java.sql.*;
 import java.io.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class InterrogPostgresql {
     public static void main(String args[]) throws SQLException {
-
         String username;
         String password;
         String url;
@@ -19,7 +20,7 @@ public class InterrogPostgresql {
 
         String requete;
 
-        requete = "select distinct fichier,rubrique from titretexte where mot='micro';";
+        requete = "select distinct fichier,rubrique from titretext where mot='micro';";
 
         // INSTALL/load the Driver (Vendor specific Code)
         try {
@@ -38,20 +39,21 @@ public class InterrogPostgresql {
             stmt = con.createStatement();
             // Send the query and bind to the result set
             ResultSet rs = stmt.executeQuery(requete);
+            ResultSetMetaData metaData = rs.getMetaData();
+
             while (rs.next()) {
-                String s = rs.getString("fichier");
-                System.out.print(s);
-                System.out.print("\t");
-                s = rs.getString("rubrique");
-                System.out.print(s);
-                System.out.println();
+                String s = "";
+                for (int i = 1; i <= metaData.getColumnCount(); i++) {
+                    s += rs.getString(i) + "\t";
+                }
+                System.out.println(s.trim());
             }
             // Close resources
             stmt.close();
             con.close();
 
         }
-        // print out decent erreur messages
+        // print out decent error messages
         catch (SQLException ex) {
             System.err.println("==> SQLException: ");
             while (ex != null) {
