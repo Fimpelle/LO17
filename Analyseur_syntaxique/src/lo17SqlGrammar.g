@@ -33,9 +33,6 @@ CONJET : 'et'
 CONJOU : 'ou'
 ;
 
-POINT : '.'
-;
-
 MOT : 'mot' | 'contenir' | 'parler' | 'traiter'
 ;
  
@@ -47,7 +44,7 @@ VAR : ('A'..'Z' | 'a'..'z'|'\u00a0'..'\u00ff')(('a'..'z')|('0'..'9')|'-'|('\u00a
 
 listerequetes returns [String sql = ""]
 	@init	{Arbre lr_arbre;}: 
-		r = requete POINT
+		r = requete
 			{
 				lr_arbre = $r.req_arbre;
 				sql = lr_arbre.sortArbre();
@@ -56,23 +53,37 @@ listerequetes returns [String sql = ""]
 
 requete returns [Arbre req_arbre = new Arbre("")]
 	@init {Arbre ps_arbre;} :
-	// 
-	SELECT ARTICLE MOT ps=params {
+	
+	SELECT? ARTICLE MOT ps=params {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
-		req_arbre.ajouteFils(new Arbre("","article"));
-		req_arbre.ajouteFils(new Arbre("","FROM titreresume"));
+		req_arbre.ajouteFils(new Arbre("","fichier"));
+		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
 		req_arbre.ajouteFils(new Arbre("","WHERE"));
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}
-	| SELECT ARTICLE MOT ps=params {
+	| SELECT? BULLETIN MOT ps=params {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
-		req_arbre.ajouteFils(new Arbre("","article"));
-		req_arbre.ajouteFils(new Arbre("","FROM titreresume"));
+		req_arbre.ajouteFils(new Arbre("","numero"));
+		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
 		req_arbre.ajouteFils(new Arbre("","WHERE"));
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}
+	| SELECT? COUNT ARTICLE MOT ps=params {
+		req_arbre.ajouteFils(new Arbre("","SELECT COUNT(DISTINCT fichier)"));
+		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
+		req_arbre.ajouteFils(new Arbre("","WHERE"));
+		ps_arbre = $ps.les_pars_arbre;
+		req_arbre.ajouteFils(ps_arbre);
+	}  
+	| SELECT? COUNT BULLETIN MOT ps=params {
+		req_arbre.ajouteFils(new Arbre("","SELECT COUNT(DISTINCT numero)"));
+		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
+		req_arbre.ajouteFils(new Arbre("","WHERE"));
+		ps_arbre = $ps.les_pars_arbre;
+		req_arbre.ajouteFils(ps_arbre);
+	}  
 ;
 
 params returns [Arbre les_pars_arbre = new Arbre("")]
