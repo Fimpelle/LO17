@@ -107,9 +107,15 @@ public class Lexique {
 
         for (String cle : dictionnaire.keySet()) {
             int longCle = cle.length();
+
+            // Si mot ou clé trop court, on passe à la pochaine clé
+            if (longMot < 3 || longCle < 3) {
+                continue;
+            }
+
             ArrayList<ArrayList<Integer>> dist = new ArrayList<ArrayList<Integer>>(longMot);
             for (Integer i = 0; i <= longMot; i++) {
-                dist.add(i, new ArrayList<Integer>(longCle));
+                dist.add(i, new ArrayList<>(longCle));
                 dist.get(i).add(0, i);
             }
             for (Integer i = 0; i <= longCle; i++) {
