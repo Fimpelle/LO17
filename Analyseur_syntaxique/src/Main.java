@@ -8,33 +8,46 @@ public class Main {
 
 	public static void main(String args[]) {
 		Scanner scanner = new Scanner(System.in);
-		
-		System.out.print("Texte : ");
+		PgsqlInterrogator.init();
+		PgsqlInterrogator.open();
+
+		System.out.print("Input : ");
 		// input natural language request
 		String s = scanner.nextLine();
 		// get normalized request
 		s = Normalisator.normalize(s);
 		// print normalized request
-		System.out.println(s);
+		System.out.println("Normalized : " + s);
 
+		// main loop
 		while (!s.equals("*")) {
 			try {
 				lo17SqlGrammarLexer lexer = new lo17SqlGrammarLexer(new ANTLRReaderStream(new StringReader(s)));
 				CommonTokenStream tokens = new CommonTokenStream(lexer);
 				lo17SqlGrammarParser parser = new lo17SqlGrammarParser(tokens);
 
-				String arbre = parser.listerequetes();
+				// construct query
+				String query = parser.listerequetes();
 
-				System.out.println(arbre);
+				System.out.println("Query : " + query);
+				System.out.println("Query execution :");
+				PgsqlInterrogator.execQuery(query);
 			}
 			catch (Exception e) {
 
 			}
 
-			System.out.print("Texte : ");
+			System.out.print("\t\t####################\nInput : ");
+			// input natural language request
 			s = scanner.nextLine();
+			// get normalized request
+			s = Normalisator.normalize(s);
+			// print normalized request
+			System.out.println("Normalized : " + s);
 		}
-		
+
+
+		PgsqlInterrogator.close();
 		scanner.close();
 	}
 }
