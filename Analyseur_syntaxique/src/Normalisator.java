@@ -30,9 +30,7 @@ public class Normalisator {
 			// 2)c
 			else if((lemmesCandidats = lexique.proximitePrefixe(string)).size()>0){
 				// Choisit un candidat qui est un anagramme ou obtenu avec des fautes de frappe
-				System.out.println("on est dans prefixe");
 				if(lemmesCandidats.size()>1){
-					System.out.println("on est dans verifFaute");
 					lemmesCandidats = lexique.verifFautes(lemmesCandidats, string);
 				}
 				// take first candidate ?
@@ -40,10 +38,8 @@ public class Normalisator {
 			}
 			// 2)c
 			else if((lemmesCandidats = lexique.proximiteLevenshtein(string)).size()>0){
-				System.out.println("on est dans levenshtein");
 				// Choisit un candidat qui est un anagramme ou obtenu avec des fautes de frappe
 				if(lemmesCandidats.size()>1){
-					System.out.println("on est dans verifFaute");
 					lemmesCandidats = lexique.verifFautes(lemmesCandidats, string);
 				}
 				// take first candidate ?
