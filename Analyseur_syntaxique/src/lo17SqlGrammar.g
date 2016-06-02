@@ -1,6 +1,6 @@
 grammar lo17SqlGrammar;
 
-SELECT : 'vouloir' | 'afficher' | 'trouver' | 'recuperer' | 'donner' | 'quel'
+SELECT : 'vouloir' | 'afficher' | 'trouve' | 'recuperer' | 'donner' | 'quel'
 ;
 
 COUNT : 'combien' | 'nombre'
@@ -54,6 +54,7 @@ listerequetes returns [String sql = ""]
 requete returns [Arbre req_arbre = new Arbre("")]
 	@init {Arbre ps_arbre;} :
 	
+	// Je veux les articles qui parlent de X
 	SELECT? ARTICLE MOT ps=params {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 		req_arbre.ajouteFils(new Arbre("","fichier"));
@@ -62,6 +63,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}
+	// Je veux les bulletins qui parlent de X
 	| SELECT? BULLETIN MOT ps=params {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 		req_arbre.ajouteFils(new Arbre("","numero"));
@@ -70,6 +72,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}
+	// nomber d'articles contenant le mot X
 	| SELECT? COUNT ARTICLE MOT ps=params {
 		req_arbre.ajouteFils(new Arbre("","SELECT COUNT(DISTINCT fichier)"));
 		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
@@ -77,13 +80,23 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}  
+	// nombre de bulletins contenant le mot X
 	| SELECT? COUNT BULLETIN MOT ps=params {
 		req_arbre.ajouteFils(new Arbre("","SELECT COUNT(DISTINCT numero)"));
 		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
 		req_arbre.ajouteFils(new Arbre("","WHERE"));
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
-	}  
+	}
+	// Quels sont les articles qui ont pour sujet X
+	| SELECT? ARTICLE TITRE ps=params {
+		req_arbre.ajouteFils(new Arbre("","SELECT"));
+		req_arbre.ajouteFils(new Arbre("","fichier"));
+		req_arbre.ajouteFils(new Arbre("","FROM titre"));
+		req_arbre.ajouteFils(new Arbre("","WHERE"));
+		ps_arbre = $ps.les_pars_arbre;
+		req_arbre.ajouteFils(ps_arbre);
+	}    
 ;
 
 params returns [Arbre les_pars_arbre = new Arbre("")]

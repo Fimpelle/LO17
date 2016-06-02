@@ -21,7 +21,8 @@ public class Lexique {
 
     public Lexique(String file) {
         dictionnaire = new HashMap<String, String>();
-        //initProximiteMot();
+        proximiteMots = new HashMap<Character, ArrayList<Character>>();
+        initProximiteMot();
         load(file);
     }
 
@@ -115,7 +116,7 @@ public class Lexique {
 
             ArrayList<ArrayList<Integer>> dist = new ArrayList<ArrayList<Integer>>(longMot);
             for (Integer i = 0; i <= longMot; i++) {
-                dist.add(i, new ArrayList<>(longCle));
+                dist.add(i, new ArrayList<Integer>(longCle));
                 dist.get(i).add(0, i);
             }
             for (Integer i = 0; i <= longCle; i++) {
@@ -138,17 +139,6 @@ public class Lexique {
                     candidats.add(dictionnaire.get(cle));
                 } else if (currDist == bestDist) {
                     candidats.add(dictionnaire.get(cle));
-                }
-            }
-        }
-        // Si un candidat est un anagramme du mot, on ne garde que lui
-        // Pour qu'un anagramme ait le seuil nécessaire pour être candidat, il ne doit avoir qu'une ou deux paires de lettres permutées
-        if (candidats.size() > 1) {
-            for (String candidat : candidats) {
-                if (anagramme(candidat, mot)) {
-                    candidats.clear();
-                    candidats.add(candidat);
-                    break;
                 }
             }
         }
@@ -175,18 +165,74 @@ public class Lexique {
         }
         return true;
     }
+    
+    // Si un candidat est un anagramme du mot, on ne garde que lui
+    // Pour qu'un anagramme ait le seuil nécessaire pour être candidat, il ne doit avoir qu'une ou deux paires de lettres permutées
+    private ArrayList<String> verifAnagramme(ArrayList<String> candidats, String mot){
+    	ArrayList<String> newCandidats = new ArrayList<String>();
+    	if (candidats.size() > 1) {
+            for (String candidat : candidats) {
+                if (anagramme(candidat, mot)) {
+                    newCandidats.add(candidat);
+                    break;
+                }
+            }
+        }
+    	// Si on n'a pas trouvé de nouveaux candidats, on renvoie la liste initiale
+    	if(newCandidats.size()>=1)
+    		return newCandidats;
+    	else
+    		return candidats;
+    }
+    
+    private ArrayList<String> verifFauteSaisie(ArrayList<String> candidats, String mot){
+    	int maxScore = 0;
+    	ArrayList<String> newCandidats = new ArrayList<String>();
+    	if (candidats.size() > 1) {
+            for (String candidat : candidats) {
+            	if(proxFauteSaisie(candidat, mot)>maxScore){
+            		newCandidats.clear();
+            		newCandidats.add(candidat);
+            	}
+            	else if(proxFauteSaisie(candidat, mot)==maxScore){
+            		newCandidats.add(candidat);
+            	}
+            }
+        }
+    	// Si on n'a pas trouvé de nouveaux candidats, on renvoie la liste initiale
+    	if(newCandidats.size()>=1)
+    		return newCandidats;
+    	else
+    		return candidats;
+    }
+    
+    // Vérifie d'abord s'il y a des anagrammes entre les candidats et le mot
+    // S'il y en a au moins deux ou qu'il n'y en a pas, on vérifie aussi s'il y a eu des fautes de frappe parmi les candidats
+    public ArrayList<String> verifFautes(ArrayList<String> candidats, String mot){
+    	candidats = verifAnagramme(candidats, mot);
+    	if(candidats.size()>1){
+    		verifFauteSaisie(candidats, mot);
+    	}
+    	return candidats;
+    }
 
-    // return le nombre de lettres égales ou à proximité du mot ref
+    // retourne le nombre de lettres égales ou à proximité du mot ref
     private int proxFauteSaisie(String mot, String ref) {
         int score = 0;
-        for (int i = 0; i < mot.length(); i++) {
-
+        // on augmente le score pour chaque lettre de ref qui est à proximité de la lettre à la même position dans mot
+    	for (int i = 0; i < Math.min(mot.length(), ref.length()); i++) {
+        	if(proximiteMots.containsKey(ref.charAt(i))){
+        		if(proximiteMots.get(ref.charAt(i)).contains(mot.charAt(i))){
+        			score++;
+        		}
+        	}
         }
         return score;
     }
+    
+    
 
     private void initProximiteMot() {
-        proximiteMots = new HashMap<Character, ArrayList<Character>>();
         //a
         proximiteMots.put('a', new ArrayList<Character>());
         proximiteMots.get('a').add('a');
@@ -276,6 +322,7 @@ public class Lexique {
         proximiteMots.get('o').add('ç');
         proximiteMots.get('o').add('à');
         //p
+        proximiteMots.put('p', new ArrayList<Character>());
         proximiteMots.get('p').add('o');
         proximiteMots.get('p').add('p');
         proximiteMots.get('p').add('l');
@@ -283,5 +330,136 @@ public class Lexique {
         proximiteMots.get('p').add('^');
         proximiteMots.get('p').add(')');
         proximiteMots.get('p').add('à');
+        //q
+        proximiteMots.put('q', new ArrayList<Character>());
+        proximiteMots.get('q').add('q');
+        proximiteMots.get('q').add('a');
+        proximiteMots.get('q').add('z');
+        proximiteMots.get('q').add('s');
+        proximiteMots.get('q').add('w');
+        proximiteMots.get('q').add('<');
+        //s
+        proximiteMots.put('s', new ArrayList<Character>());
+        proximiteMots.get('s').add('q');
+        proximiteMots.get('s').add('s');
+        proximiteMots.get('s').add('z');
+        proximiteMots.get('s').add('e');
+        proximiteMots.get('s').add('d');
+        proximiteMots.get('s').add('x');
+        proximiteMots.get('s').add('w');
+        //d
+        proximiteMots.put('d', new ArrayList<Character>());
+        proximiteMots.get('d').add('e');
+        proximiteMots.get('d').add('s');
+        proximiteMots.get('d').add('r');
+        proximiteMots.get('d').add('f');
+        proximiteMots.get('d').add('d');
+        proximiteMots.get('d').add('c');
+        proximiteMots.get('d').add('x');
+        //f
+        proximiteMots.put('f', new ArrayList<Character>());
+        proximiteMots.get('f').add('r');
+        proximiteMots.get('f').add('d');
+        proximiteMots.get('f').add('t');
+        proximiteMots.get('f').add('g');
+        proximiteMots.get('f').add('v');
+        proximiteMots.get('f').add('c');
+        proximiteMots.get('f').add('f');
+        //g
+        proximiteMots.put('g', new ArrayList<Character>());
+        proximiteMots.get('g').add('f');
+        proximiteMots.get('g').add('t');
+        proximiteMots.get('g').add('y');
+        proximiteMots.get('g').add('g');
+        proximiteMots.get('g').add('h');
+        proximiteMots.get('g').add('b');
+        proximiteMots.get('g').add('v');
+        //h
+        proximiteMots.put('h', new ArrayList<Character>());
+        proximiteMots.get('h').add('y');
+        proximiteMots.get('h').add('g');
+        proximiteMots.get('h').add('u');
+        proximiteMots.get('h').add('j');
+        proximiteMots.get('h').add('h');
+        proximiteMots.get('h').add('b');
+        proximiteMots.get('h').add('n');
+        //j
+        proximiteMots.put('j', new ArrayList<Character>());
+        proximiteMots.get('j').add('h');
+        proximiteMots.get('j').add('u');
+        proximiteMots.get('j').add('i');
+        proximiteMots.get('j').add('j');
+        proximiteMots.get('j').add('k');
+        proximiteMots.get('j').add('n');
+        proximiteMots.get('j').add(',');
+        //k
+        proximiteMots.put('k', new ArrayList<Character>());
+        proximiteMots.get('k').add('j');
+        proximiteMots.get('k').add('i');
+        proximiteMots.get('k').add('o');
+        proximiteMots.get('k').add('l');
+        proximiteMots.get('k').add('k');
+        proximiteMots.get('k').add(';');
+        proximiteMots.get('k').add(',');
+        //l
+        proximiteMots.put('l', new ArrayList<Character>());
+        proximiteMots.get('l').add('k');
+        proximiteMots.get('l').add('o');
+        proximiteMots.get('l').add('p');
+        proximiteMots.get('l').add('l');
+        proximiteMots.get('l').add('m');
+        proximiteMots.get('l').add(':');
+        proximiteMots.get('l').add(';');
+        //m
+        proximiteMots.put('m', new ArrayList<Character>());
+        proximiteMots.get('m').add('l');
+        proximiteMots.get('m').add('p');
+        proximiteMots.get('m').add('^');
+        proximiteMots.get('m').add('ù');
+        proximiteMots.get('m').add('m');
+        proximiteMots.get('m').add('!');
+        proximiteMots.get('m').add(':');
+        //w
+        proximiteMots.put('w', new ArrayList<Character>());
+        proximiteMots.get('w').add('q');
+        proximiteMots.get('w').add('s');
+        proximiteMots.get('w').add('x');
+        proximiteMots.get('w').add('w');
+        proximiteMots.get('w').add('<');
+        //x
+        proximiteMots.put('x', new ArrayList<Character>());
+        proximiteMots.get('x').add('w');
+        proximiteMots.get('x').add('s');
+        proximiteMots.get('x').add('d');
+        proximiteMots.get('x').add('c');
+        proximiteMots.get('x').add('x');
+        //c
+        proximiteMots.put('c', new ArrayList<Character>());
+        proximiteMots.get('c').add('x');
+        proximiteMots.get('c').add('d');
+        proximiteMots.get('c').add('f');
+        proximiteMots.get('c').add('v');
+        proximiteMots.get('c').add('c');
+        //v
+        proximiteMots.put('v', new ArrayList<Character>());
+        proximiteMots.get('v').add('c');
+        proximiteMots.get('v').add('f');
+        proximiteMots.get('v').add('g');
+        proximiteMots.get('v').add('v');
+        proximiteMots.get('v').add('b');
+        //b
+        proximiteMots.put('b', new ArrayList<Character>());
+        proximiteMots.get('b').add('v');
+        proximiteMots.get('b').add('g');
+        proximiteMots.get('b').add('h');
+        proximiteMots.get('b').add('n');
+        proximiteMots.get('b').add('b');
+        //n
+        proximiteMots.put('n', new ArrayList<Character>());
+        proximiteMots.get('n').add('b');
+        proximiteMots.get('n').add('h');
+        proximiteMots.get('n').add('j');
+        proximiteMots.get('n').add(',');
+        proximiteMots.get('n').add('n');
     }
 }
