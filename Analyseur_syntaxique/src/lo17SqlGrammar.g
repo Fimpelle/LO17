@@ -3,6 +3,9 @@ grammar lo17SqlGrammar;
 SELECT : 'vouloir' | 'afficher' | 'trouve' | 'recuperer' | 'donner' | 'quel'
 ;
 
+EVERY : 'tous'
+;
+
 COUNT : 'combien' | 'nombre'
 ;
 
@@ -35,7 +38,7 @@ CONJOU : 'ou'
 
 MOT : 'mot' | 'contenir' | 'parler' | 'trait'
 ;
- 
+
 WS  : (' ' |'\t' | '\r' | 'je' | 'qui' | 'dont') {skip();} | '\n' 
 ;
 
@@ -96,7 +99,19 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		req_arbre.ajouteFils(new Arbre("","WHERE"));
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
-	}    
+	}
+	// Je veux (tous) les articles
+	| SELECT? EVERY? ARTICLE {
+		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+		req_arbre.ajouteFils(new Arbre("","fichier"));
+		req_arbre.ajouteFils(new Arbre("","FROM numero"));
+	}
+	// Je veux (tous) les bulletins
+	| SELECT? EVERY? BULLETIN {
+		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+		req_arbre.ajouteFils(new Arbre("","numero"));
+		req_arbre.ajouteFils(new Arbre("","FROM numero"));
+	}
 ;
 
 params returns [Arbre les_pars_arbre = new Arbre("")]
