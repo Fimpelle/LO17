@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g 2016-05-27 15:48:56
+// $ANTLR 3.5.1 C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g 2016-06-03 13:49:16
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -36,14 +36,14 @@ public class lo17SqlGrammarLexer extends Lexer {
 	public lo17SqlGrammarLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g"; }
 
 	// $ANTLR start "SELECT"
 	public final void mSELECT() throws RecognitionException {
 		try {
 			int _type = SELECT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:8: ( 'vouloir' | 'afficher' | 'trouver' | 'recuperer' | 'donner' | 'quel' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:8: ( 'vouloir' | 'afficher' | 'trouve' | 'recuperer' | 'donner' | 'quel' )
 			int alt1=6;
 			switch ( input.LA(1) ) {
 			case 'v':
@@ -83,42 +83,42 @@ public class lo17SqlGrammarLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:10: 'vouloir'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:10: 'vouloir'
 					{
 					match("vouloir"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:22: 'afficher'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:22: 'afficher'
 					{
 					match("afficher"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:35: 'trouver'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:35: 'trouve'
 					{
-					match("trouver"); 
+					match("trouve"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:47: 'recuperer'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:46: 'recuperer'
 					{
 					match("recuperer"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:61: 'donner'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:60: 'donner'
 					{
 					match("donner"); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:72: 'quel'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:3:71: 'quel'
 					{
 					match("quel"); 
 
@@ -140,7 +140,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = COUNT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:6:7: ( 'combien' | 'nombre' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:6:7: ( 'combien' | 'nombre' )
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='c') ) {
@@ -158,14 +158,14 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt2) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:6:9: 'combien'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:6:9: 'combien'
 					{
 					match("combien"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:6:21: 'nombre'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:6:21: 'nombre'
 					{
 					match("nombre"); 
 
@@ -187,8 +187,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = ARTICLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:9:9: ( 'article' )
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:9:11: 'article'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:9:9: ( 'article' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:9:11: 'article'
 			{
 			match("article"); 
 
@@ -208,8 +208,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = BULLETIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:12:10: ( 'bulletin' )
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:12:12: 'bulletin'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:12:10: ( 'bulletin' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:12:12: 'bulletin'
 			{
 			match("bulletin"); 
 
@@ -229,7 +229,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = TITRE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:15:7: ( 'titre' | 'sujet' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:15:7: ( 'titre' | 'sujet' )
 			int alt3=2;
 			int LA3_0 = input.LA(1);
 			if ( (LA3_0=='t') ) {
@@ -247,14 +247,14 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt3) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:15:9: 'titre'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:15:9: 'titre'
 					{
 					match("titre"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:15:19: 'sujet'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:15:19: 'sujet'
 					{
 					match("sujet"); 
 
@@ -276,8 +276,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = TEXTE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:18:6: ( 'texte' )
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:18:8: 'texte'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:18:6: ( 'texte' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:18:8: 'texte'
 			{
 			match("texte"); 
 
@@ -297,7 +297,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = RUBRIQUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:9: ( 'catégorie' | 'rubrique' | 'thème' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:9: ( 'catégorie' | 'rubrique' | 'thème' )
 			int alt4=3;
 			switch ( input.LA(1) ) {
 			case 'c':
@@ -322,21 +322,21 @@ public class lo17SqlGrammarLexer extends Lexer {
 			}
 			switch (alt4) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:11: 'catégorie'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:11: 'catégorie'
 					{
 					match("catégorie"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:26: 'rubrique'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:26: 'rubrique'
 					{
 					match("rubrique"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:39: 'thème'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:21:39: 'thème'
 					{
 					match("thème"); 
 
@@ -358,7 +358,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = AUTEUR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:7: ( 'auteur' | 'écrire' | 'auteur avoir écrire' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:7: ( 'auteur' | 'écrire' | 'auteur avoir écrire' )
 			int alt5=3;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='a') ) {
@@ -472,21 +472,21 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt5) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:9: 'auteur'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:9: 'auteur'
 					{
 					match("auteur"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:20: 'écrire'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:20: 'écrire'
 					{
 					match("écrire"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:32: 'auteur avoir écrire'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:24:32: 'auteur avoir écrire'
 					{
 					match("auteur avoir écrire"); 
 
@@ -508,7 +508,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = DATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:5: ( 'quand' | 'quel date' | 'publier' | 'paraître' | 'paru' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:5: ( 'quand' | 'quel date' | 'publier' | 'paraître' | 'paru' )
 			int alt6=5;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='q') ) {
@@ -621,35 +621,35 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt6) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:7: 'quand'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:7: 'quand'
 					{
 					match("quand"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:17: 'quel date'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:17: 'quel date'
 					{
 					match("quel date"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:31: 'publier'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:31: 'publier'
 					{
 					match("publier"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:43: 'paraître'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:43: 'paraître'
 					{
 					match("paraître"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:57: 'paru'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:27:57: 'paru'
 					{
 					match("paru"); 
 
@@ -671,8 +671,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = CONJET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:30:8: ( 'et' )
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:30:10: 'et'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:30:8: ( 'et' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:30:10: 'et'
 			{
 			match("et"); 
 
@@ -692,8 +692,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = CONJOU;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:33:8: ( 'ou' )
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:33:10: 'ou'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:33:8: ( 'ou' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:33:10: 'ou'
 			{
 			match("ou"); 
 
@@ -713,7 +713,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = MOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:5: ( 'mot' | 'contenir' | 'parler' | 'traiter' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:5: ( 'mot' | 'contenir' | 'parler' | 'trait' )
 			int alt7=4;
 			switch ( input.LA(1) ) {
 			case 'm':
@@ -743,30 +743,30 @@ public class lo17SqlGrammarLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:7: 'mot'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:7: 'mot'
 					{
 					match("mot"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:15: 'contenir'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:15: 'contenir'
 					{
 					match("contenir"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:28: 'parler'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:28: 'parler'
 					{
 					match("parler"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:39: 'traiter'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:36:39: 'trait'
 					{
-					match("traiter"); 
+					match("trait"); 
 
 					}
 					break;
@@ -786,7 +786,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:5: ( ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' ) | '\\n' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:5: ( ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' ) | '\\n' )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='\t'||LA9_0=='\r'||LA9_0==' '||LA9_0=='d'||LA9_0=='j'||LA9_0=='q') ) {
@@ -804,9 +804,9 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
 					{
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
 					int alt8=6;
 					switch ( input.LA(1) ) {
 					case ' ':
@@ -846,39 +846,39 @@ public class lo17SqlGrammarLexer extends Lexer {
 					}
 					switch (alt8) {
 						case 1 :
-							// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:8: ' '
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:8: ' '
 							{
 							match(' '); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:13: '\\t'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:13: '\\t'
 							{
 							match('\t'); 
 							}
 							break;
 						case 3 :
-							// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:20: '\\r'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:20: '\\r'
 							{
 							match('\r'); 
 							}
 							break;
 						case 4 :
-							// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:27: 'je'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:27: 'je'
 							{
 							match("je"); 
 
 							}
 							break;
 						case 5 :
-							// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:34: 'qui'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:34: 'qui'
 							{
 							match("qui"); 
 
 							}
 							break;
 						case 6 :
-							// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:42: 'dont'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:42: 'dont'
 							{
 							match("dont"); 
 
@@ -891,7 +891,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:62: '\\n'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:39:62: '\\n'
 					{
 					match('\n'); 
 					}
@@ -912,8 +912,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:42:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:42:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:42:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:42:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z')||(input.LA(1) >= '\u00A0' && input.LA(1) <= '\u00FF') ) {
 				input.consume();
@@ -923,7 +923,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:42:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:42:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
 			int cnt10=0;
 			loop10:
 			while (true) {
@@ -935,7 +935,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 				switch (alt10) {
 				case 1 :
-					// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:
 					{
 					if ( input.LA(1)=='-'||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'a' && input.LA(1) <= 'z')||(input.LA(1) >= '\u00A0' && input.LA(1) <= '\u00FF') ) {
 						input.consume();
@@ -969,103 +969,103 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:8: ( SELECT | COUNT | ARTICLE | BULLETIN | TITRE | TEXTE | RUBRIQUE | AUTEUR | DATE | CONJET | CONJOU | MOT | WS | VAR )
+		// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:8: ( SELECT | COUNT | ARTICLE | BULLETIN | TITRE | TEXTE | RUBRIQUE | AUTEUR | DATE | CONJET | CONJOU | MOT | WS | VAR )
 		int alt11=14;
 		alt11 = dfa11.predict(input);
 		switch (alt11) {
 			case 1 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:10: SELECT
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:10: SELECT
 				{
 				mSELECT(); 
 
 				}
 				break;
 			case 2 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:17: COUNT
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:17: COUNT
 				{
 				mCOUNT(); 
 
 				}
 				break;
 			case 3 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:23: ARTICLE
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:23: ARTICLE
 				{
 				mARTICLE(); 
 
 				}
 				break;
 			case 4 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:31: BULLETIN
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:31: BULLETIN
 				{
 				mBULLETIN(); 
 
 				}
 				break;
 			case 5 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:40: TITRE
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:40: TITRE
 				{
 				mTITRE(); 
 
 				}
 				break;
 			case 6 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:46: TEXTE
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:46: TEXTE
 				{
 				mTEXTE(); 
 
 				}
 				break;
 			case 7 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:52: RUBRIQUE
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:52: RUBRIQUE
 				{
 				mRUBRIQUE(); 
 
 				}
 				break;
 			case 8 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:61: AUTEUR
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:61: AUTEUR
 				{
 				mAUTEUR(); 
 
 				}
 				break;
 			case 9 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:68: DATE
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:68: DATE
 				{
 				mDATE(); 
 
 				}
 				break;
 			case 10 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:73: CONJET
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:73: CONJET
 				{
 				mCONJET(); 
 
 				}
 				break;
 			case 11 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:80: CONJOU
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:80: CONJOU
 				{
 				mCONJOU(); 
 
 				}
 				break;
 			case 12 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:87: MOT
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:87: MOT
 				{
 				mMOT(); 
 
 				}
 				break;
 			case 13 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:91: WS
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:91: WS
 				{
 				mWS(); 
 
 				}
 				break;
 			case 14 :
-				// C:\\Users\\Florian\\Documents\\workspace\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:94: VAR
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\Analyseur_syntaxique\\src\\lo17SqlGrammar.g:1:94: VAR
 				{
 				mVAR(); 
 
@@ -1079,13 +1079,13 @@ public class lo17SqlGrammarLexer extends Lexer {
 	protected DFA11 dfa11 = new DFA11(this);
 	static final String DFA11_eotS =
 		"\23\uffff\24\22\1\103\1\104\1\22\1\20\16\22\1\20\11\22\2\uffff\1\140\14"+
-		"\22\1\20\1\156\12\22\1\155\1\22\1\uffff\6\22\1\u0080\1\u0081\4\22\2\uffff"+
-		"\1\155\5\22\1\u0080\7\22\1\u0092\2\22\2\uffff\1\u0095\2\22\1\156\3\22"+
-		"\1\u009b\4\22\1\140\1\156\1\22\1\u00a1\1\uffff\1\156\1\140\1\uffff\2\22"+
-		"\1\u009b\2\22\1\uffff\1\22\1\u0092\1\155\1\22\1\156\1\uffff\1\22\1\u0095"+
-		"\1\140\1\22\1\u00aa\1\22\1\156\1\22\1\uffff\1\155\1\u0095";
+		"\22\1\20\1\156\12\22\1\155\1\22\1\uffff\5\22\1\140\1\177\1\u0080\4\22"+
+		"\2\uffff\1\155\5\22\1\177\7\22\1\u0091\1\156\2\uffff\1\u0092\2\22\1\156"+
+		"\3\22\1\u0098\4\22\1\140\1\156\1\22\1\u009e\2\uffff\2\22\1\u0098\2\22"+
+		"\1\uffff\1\22\1\u0091\1\155\1\22\1\156\1\uffff\1\22\1\u0092\1\140\1\22"+
+		"\1\u00a7\1\22\1\156\1\22\1\uffff\1\155\1\u0092";
 	static final String DFA11_eofS =
-		"\u00ad\uffff";
+		"\u00aa\uffff";
 	static final String DFA11_minS =
 		"\1\11\17\55\1\uffff\1\55\1\uffff\1\165\1\146\2\164\1\141\1\164\1\170\1"+
 		"\u00c3\1\143\1\142\1\156\1\141\1\155\1\164\1\155\1\154\1\152\1\143\1\142"+
@@ -1093,12 +1093,12 @@ public class lo17SqlGrammarLexer extends Lexer {
 		"\1\165\1\162\1\156\1\154\1\156\1\55\1\142\1\164\1\u00c3\1\142\1\154\1"+
 		"\145\1\162\1\154\1\141\2\uffff\1\55\1\157\2\143\1\165\1\166\1\164\2\145"+
 		"\1\155\1\160\1\151\1\145\1\55\1\40\1\144\1\151\1\145\1\u00a9\1\162\1\145"+
-		"\1\164\2\151\1\u00c3\1\55\1\145\1\uffff\1\151\1\150\1\154\1\162\2\145"+
-		"\2\55\2\145\1\161\1\162\2\uffff\1\55\1\145\1\156\1\147\1\145\1\164\1\55"+
-		"\1\162\1\145\1\u00ae\2\162\2\145\1\55\2\162\2\uffff\1\55\1\162\1\165\1"+
-		"\55\1\156\1\151\1\157\1\55\1\151\1\145\1\162\1\164\2\55\1\162\1\55\1\uffff"+
-		"\2\55\1\uffff\2\145\1\55\2\162\1\uffff\1\156\2\55\1\162\1\55\1\uffff\1"+
-		"\162\2\55\1\151\1\55\1\145\1\55\1\145\1\uffff\2\55";
+		"\1\164\2\151\1\u00c3\1\55\1\145\1\uffff\1\151\1\150\1\154\1\162\1\145"+
+		"\3\55\2\145\1\161\1\162\2\uffff\1\55\1\145\1\156\1\147\1\145\1\164\1\55"+
+		"\1\162\1\145\1\u00ae\2\162\2\145\2\55\2\uffff\1\55\1\162\1\165\1\55\1"+
+		"\156\1\151\1\157\1\55\1\151\1\145\1\162\1\164\2\55\1\162\1\55\2\uffff"+
+		"\2\145\1\55\2\162\1\uffff\1\156\2\55\1\162\1\55\1\uffff\1\162\2\55\1\151"+
+		"\1\55\1\145\1\55\1\145\1\uffff\2\55";
 	static final String DFA11_maxS =
 		"\20\u00ff\1\uffff\1\u00ff\1\uffff\1\165\1\146\2\164\1\157\1\164\1\170"+
 		"\1\u00c3\1\143\1\142\1\156\1\151\1\156\1\164\1\155\1\154\1\152\1\143\1"+
@@ -1107,18 +1107,18 @@ public class lo17SqlGrammarLexer extends Lexer {
 		"\1\142\1\154\1\145\1\162\1\154\1\165\2\uffff\1\u00ff\1\157\2\143\1\165"+
 		"\1\166\1\164\2\145\1\155\1\160\1\151\1\145\2\u00ff\1\144\1\151\1\145\1"+
 		"\u00a9\1\162\1\145\1\164\2\151\1\u00c3\1\u00ff\1\145\1\uffff\1\151\1\150"+
-		"\1\154\1\162\2\145\2\u00ff\2\145\1\161\1\162\2\uffff\1\u00ff\1\145\1\156"+
-		"\1\147\1\145\1\164\1\u00ff\1\162\1\145\1\u00ae\2\162\2\145\1\u00ff\2\162"+
-		"\2\uffff\1\u00ff\1\162\1\165\1\u00ff\1\156\1\151\1\157\1\u00ff\1\151\1"+
-		"\145\1\162\1\164\2\u00ff\1\162\1\u00ff\1\uffff\2\u00ff\1\uffff\2\145\1"+
-		"\u00ff\2\162\1\uffff\1\156\2\u00ff\1\162\1\u00ff\1\uffff\1\162\2\u00ff"+
-		"\1\151\1\u00ff\1\145\1\u00ff\1\145\1\uffff\2\u00ff";
+		"\1\154\1\162\1\145\3\u00ff\2\145\1\161\1\162\2\uffff\1\u00ff\1\145\1\156"+
+		"\1\147\1\145\1\164\1\u00ff\1\162\1\145\1\u00ae\2\162\2\145\2\u00ff\2\uffff"+
+		"\1\u00ff\1\162\1\165\1\u00ff\1\156\1\151\1\157\1\u00ff\1\151\1\145\1\162"+
+		"\1\164\2\u00ff\1\162\1\u00ff\2\uffff\2\145\1\u00ff\2\162\1\uffff\1\156"+
+		"\2\u00ff\1\162\1\u00ff\1\uffff\1\162\2\u00ff\1\151\1\u00ff\1\145\1\u00ff"+
+		"\1\145\1\uffff\2\u00ff";
 	static final String DFA11_acceptS =
 		"\20\uffff\1\15\1\uffff\1\16\60\uffff\1\12\1\13\33\uffff\1\14\14\uffff"+
-		"\1\11\1\1\21\uffff\1\5\1\6\20\uffff\1\10\2\uffff\1\7\5\uffff\1\2\5\uffff"+
-		"\1\3\10\uffff\1\4\2\uffff";
+		"\1\11\1\1\20\uffff\1\5\1\6\20\uffff\1\10\1\7\5\uffff\1\2\5\uffff\1\3\10"+
+		"\uffff\1\4\2\uffff";
 	static final String DFA11_specialS =
-		"\u00ad\uffff}>";
+		"\u00aa\uffff}>";
 	static final String[] DFA11_transitionS = {
 			"\2\20\2\uffff\1\20\22\uffff\1\20\40\uffff\32\22\6\uffff\1\2\1\11\1\7"+
 			"\1\5\1\15\4\22\1\21\2\22\1\17\1\10\1\16\1\14\1\6\1\4\1\12\1\3\1\22\1"+
@@ -1227,74 +1227,71 @@ public class lo17SqlGrammarLexer extends Lexer {
 			"\1\174",
 			"\1\175",
 			"\1\176",
-			"\1\177",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u0081",
 			"\1\u0082",
 			"\1\u0083",
 			"\1\u0084",
-			"\1\u0085",
 			"",
 			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u0085",
 			"\1\u0086",
 			"\1\u0087",
 			"\1\u0088",
 			"\1\u0089",
-			"\1\u008a",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u008a",
 			"\1\u008b",
 			"\1\u008c",
 			"\1\u008d",
 			"\1\u008e",
 			"\1\u008f",
 			"\1\u0090",
-			"\1\u0091",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"",
+			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u0093",
 			"\1\u0094",
-			"",
-			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u0095",
 			"\1\u0096",
 			"\1\u0097",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u0098",
 			"\1\u0099",
 			"\1\u009a",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u009b",
 			"\1\u009c",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u009d",
-			"\1\u009e",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"",
+			"",
 			"\1\u009f",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a0",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
+			"\1\u00a1",
 			"\1\u00a2",
+			"",
 			"\1\u00a3",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a4",
-			"\1\u00a5",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"",
+			"\1\u00a5",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a6",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u00a7",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
 			"\1\u00a8",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a9",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u00ab",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u00ac",
 			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22"

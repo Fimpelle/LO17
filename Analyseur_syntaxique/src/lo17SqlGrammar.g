@@ -33,7 +33,7 @@ CONJET : 'et'
 CONJOU : 'ou'
 ;
 
-MOT : 'mot' | 'contenir' | 'parler' | 'traiter'
+MOT : 'mot' | 'contenir' | 'parler' | 'trait'
 ;
  
 WS  : (' ' |'\t' | '\r' | 'je' | 'qui' | 'dont') {skip();} | '\n' 
