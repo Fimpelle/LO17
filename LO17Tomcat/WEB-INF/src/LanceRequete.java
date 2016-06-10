@@ -6,6 +6,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 import java.sql.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.io.*;
 
 public class LanceRequete extends HttpServlet {
@@ -70,7 +72,15 @@ public class LanceRequete extends HttpServlet {
                     for (int i = 1; i <= nbre; i++) {
                         nom = rsmd.getColumnName(i);
                         String s = rs.getString(nom);
-                        responseWriter.print(s);
+                        Pattern p = Pattern.compile("\\.htm");
+    			        Matcher m = p.matcher(s);
+    			        if (m.lookingAt())
+    			        {
+    			        	responseWriter.print("<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>");
+    			        }
+    			        else{
+    			        	responseWriter.print(s);
+    			        }
                     }
                     responseWriter.print("<p>");
                 }
