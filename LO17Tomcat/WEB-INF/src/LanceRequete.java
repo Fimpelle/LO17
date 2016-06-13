@@ -6,6 +6,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.*;
@@ -26,11 +28,11 @@ public class LanceRequete extends HttpServlet {
             throws IOException, ServletException {
         response.setContentType("text/html");
         PrintWriter responseWriter = response.getWriter();
-        responseWriter.println("<html>");
-        responseWriter.println("<head>");
-        responseWriter.println("<title>Lance requete!</title>");
-        responseWriter.println("</head>");
-        responseWriter.println("<body>");
+//        responseWriter.println("<html>");
+//        responseWriter.println("<head>");
+//        responseWriter.println("<title>Lance requete!</title>");
+//        responseWriter.println("</head>");
+//        responseWriter.println("<body>");
 
         // ---- configure START
         username = "lo17xxx";
@@ -39,11 +41,10 @@ public class LanceRequete extends HttpServlet {
         url = "jdbc:postgresql://tuxa.sme.utc/dblo17";
         // ---- configure END
 
-        String requete = request.getParameter("txt_requete");
-
+        // get input textbox content
+        String requete = request.getParameter("r");
+        // normalize it
         requete = normaliser(requete);
-
-        //
 
         if (requete != null) {
             // INSTALL/load the Driver (Vendor specific Code)
@@ -71,16 +72,16 @@ public class LanceRequete extends HttpServlet {
     			        Matcher m = p.matcher(s);
     			        if (m.lookingAt())
     			        {
-    			        	responseWriter.print("<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>");
+    			        	//responseWriter.print("<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>");
     			        }
     			        else{
-    			        	responseWriter.print(s);
+    			        	//responseWriter.print(s);
     			        }
                     }
-                    responseWriter.print("<p>");
+                    //responseWriter.print("<p>");
                 }
-                responseWriter.println("</body>");
-                responseWriter.println("</html>");
+                //responseWriter.println("</body>");
+                //responseWriter.println("</html>");
                 // Close resources
                 stmt.close();
                 con.close();
@@ -97,6 +98,15 @@ public class LanceRequete extends HttpServlet {
                 }
             }
         }
+
+        // dummy response to test response forwarding through dispatcher
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        request.setAttribute("res", list);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+        dispatcher.forward(request, response);
     }
 
     private String normaliser(String naturalLanguageQuery) {
