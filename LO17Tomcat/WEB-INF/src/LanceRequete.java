@@ -27,12 +27,8 @@ public class LanceRequete extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         response.setContentType("text/html");
-        PrintWriter responseWriter = response.getWriter();
-//        responseWriter.println("<html>");
-//        responseWriter.println("<head>");
-//        responseWriter.println("<title>Lance requete!</title>");
-//        responseWriter.println("</head>");
-//        responseWriter.println("<body>");
+
+        List<String> requestResult = new ArrayList<>();
 
         // ---- configure START
         username = "lo17xxx";
@@ -80,13 +76,11 @@ public class LanceRequete extends HttpServlet {
                     }
                     //responseWriter.print("<p>");
                 }
-                //responseWriter.println("</body>");
-                //responseWriter.println("</html>");
                 // Close resources
                 stmt.close();
                 con.close();
             }
-            // print responseWriter decent erreur messages
+            // print decent error messages
             catch (SQLException ex) {
                 System.err.println("==> SQLException: ");
                 while (ex != null) {
