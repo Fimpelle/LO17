@@ -15,9 +15,9 @@
 <% if (request.getAttribute("err") != null) { %>
 <div id="errors">
     <%
-        for (String s : (List<String>) request.getAttribute("err")) {
-            out.println(s);
-        }
+        String s = (String) request.getAttribute("err");
+        s = s.replaceAll("\n", "<br />\n");
+        out.println(s);
     %>
 </div>
 <% } %>

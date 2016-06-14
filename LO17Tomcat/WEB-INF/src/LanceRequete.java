@@ -42,13 +42,15 @@ public class LanceRequete extends HttpServlet {
         // normalize it
         requete = normaliser(requete);
 
+        StringBuilder errBuilder = new StringBuilder();
+
         if (requete != null) {
             // INSTALL/load the Driver (Vendor specific Code)
             try {
                 Class.forName("org.postgresql.Driver");
             } catch (java.lang.ClassNotFoundException e) {
-                System.err.print("ClassNotFoundException: ");
-                System.err.println(e.getMessage());
+                errBuilder.append("ClassNotFoundException: \n")
+                        .append(e.getMessage());
             }
             try {
                 Connection con;
@@ -82,16 +84,20 @@ public class LanceRequete extends HttpServlet {
             }
             // print decent error messages
             catch (SQLException ex) {
-                System.err.println("==> SQLException: ");
+                errBuilder.append("\nUne erreur est survenue (SQLException): ");
                 while (ex != null) {
-                    System.out.println("Message:   " + ex.getMessage());
-                    System.out.println("SQLState:  " + ex.getSQLState());
-                    System.out.println("ErrorCode: " + ex.getErrorCode());
+                    errBuilder.append("\nMessage:   ").append(ex.getMessage());
+                    errBuilder.append("\nSQLState:  ").append(ex.getSQLState());
+                    errBuilder.append("\nErrorCode: ").append(ex.getErrorCode());
                     ex = ex.getNextException();
-                    System.out.println("");
+                    errBuilder.append("\n");
                 }
             }
         }
+
+        String errString = errBuilder.toString();
+        if (!errString.isEmpty())
+            request.setAttribute("err", errString);
 
         // dummy response to test response forwarding through dispatcher
         List<String> list = new ArrayList<>();
