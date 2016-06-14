@@ -43,6 +43,7 @@ public class LanceRequete extends HttpServlet {
         requete = normaliser(requete);
 
         StringBuilder errBuilder = new StringBuilder();
+        List<String> resultList = new ArrayList<>();
 
         if (requete != null) {
             // INSTALL/load the Driver (Vendor specific Code)
@@ -62,21 +63,26 @@ public class LanceRequete extends HttpServlet {
                 ResultSet rs = stmt.executeQuery(requete);
                 ResultSetMetaData rsmd = rs.getMetaData();
                 nbre = rsmd.getColumnCount();
+                String resultString = "";
+
                 while (rs.next()) {
                     for (int i = 1; i <= nbre; i++) {
                         nom = rsmd.getColumnName(i);
                         String s = rs.getString(nom);
                         Pattern p = Pattern.compile("\\.htm");
     			        Matcher m = p.matcher(s);
-    			        if (m.lookingAt())
-    			        {
-    			        	//responseWriter.print("<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>");
-    			        }
-    			        else{
-    			        	//responseWriter.print(s);
-    			        }
+//    			        if (m.lookingAt())
+//    			        {
+//    			        	resultString += "<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>";
+//    			        }
+//    			        else{
+//    			        	resultString += s + " ";
+//    			        }
+
+                        resultString += s + " ";
                     }
-                    //responseWriter.print("<p>");
+                    resultList.add(resultString.trim());
+                    resultString = "";
                 }
                 // Close resources
                 stmt.close();
@@ -99,12 +105,8 @@ public class LanceRequete extends HttpServlet {
         if (!errString.isEmpty())
             request.setAttribute("err", errString);
 
-        // dummy response to test response forwarding through dispatcher
-        List<String> list = new ArrayList<>();
-        list.add("a");
-        list.add("b");
-        list.add("c");
-        request.setAttribute("res", list);
+        if (resultList.size() > 0)
+            request.setAttribute("res", resultList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }

@@ -35,9 +35,11 @@
 <% if (request.getAttribute("res") != null) { %>
     <div id="results">
     <%
+        out.println("<ul>");
         for (String s : (List<String>) request.getAttribute("res")) {
-            out.println(s);
+            out.println("<li>" + s + "</li>");
         }
+        out.println("</ul>");
     %>
     </div>
 <% } %>
