@@ -3,10 +3,11 @@
 <html>
 <head>
     <title>LO17 - Recherche ADIT</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/res/style.css"/>
 </head>
 <body>
 <div id="search">
-    <form action="servlet/LanceRequete" method="get">
+    <form action="/servlet/LanceRequete" method="get">
         <input type="text" size="30" name="r" autocomplete=false autofocus=true>
         <input type="submit" value="Rechercher">
     </form>
