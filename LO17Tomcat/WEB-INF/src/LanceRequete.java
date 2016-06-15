@@ -8,8 +8,6 @@ import javax.servlet.http.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.io.*;
 
 public class LanceRequete extends HttpServlet {
@@ -94,12 +92,7 @@ public class LanceRequete extends HttpServlet {
                     for (int i = 1; i <= nbre; i++) {
                         nom = rsmd.getColumnName(i);
                         String s = rs.getString(nom);
-                        Pattern p = Pattern.compile("\\.htm");
-    			        Matcher m = p.matcher(s);
-    			        if (m.lookingAt())
-    			        {
-    			        	s = "<a href=" + getBulletinsFilePath() +s+ "\">"+s+ "</a>";
-    			        }
+                        
                         resultRow.add(s);
                     }
                     resultTable.add(resultRow);
