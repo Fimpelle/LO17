@@ -1,4 +1,6 @@
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.regex.Pattern" %>
+<%@ page import="java.util.regex.Matcher" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,6 +89,13 @@
                 for (List<String> l : ((List<List<String>>) request.getAttribute("res"))) {
                     out.println("<tr>");
                     for (String s : l) {
+                        // add links if possible
+                        Pattern p = Pattern.compile("(\\w+\\.htm)");
+                        Matcher m = p.matcher(s);
+                        if (m.find()) {
+                            // replace first number with "number" and second number with the first
+                            s = m.replaceFirst("<a href=\"" + request.getContextPath() + "/res/BULLETINS/$1\">"+ s +"</a>");
+                        }
                         out.println("<td>" + s + "</td>");
                     }
                     out.println("</tr>");
