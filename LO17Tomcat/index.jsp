@@ -38,7 +38,7 @@
         </form>
     </div>
 </div>
-
+<div class="container">
     <%-- Display errors, if any --%>
     <% if (request.getAttribute("err") != null) { %>
     <div id="errors" class="alert alert-danger">
