@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="search">
-    <form action="/servlet/LanceRequete" method="get">
+    <form action="${pageContext.request.contextPath}/servlet/LanceRequete" method="get">
         <input type="text" size="30" name="r" autocomplete=false autofocus=true>
         <input type="submit" value="Rechercher">
     </form>
