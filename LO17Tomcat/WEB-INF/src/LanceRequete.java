@@ -6,6 +6,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.*;
@@ -25,38 +27,38 @@ public class LanceRequete extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         response.setContentType("text/html");
-        PrintWriter responseWriter = response.getWriter();
-        responseWriter.println("<html>");
-        responseWriter.println("<head>");
-        responseWriter.println("<title>Lance requete!</title>");
-        responseWriter.println("</head>");
-        responseWriter.println("<body>");
+
+        List<String> requestResult = new ArrayList<>();
 
         // ---- configure START
         username = "lo17xxx";
         password = "dblo17";
         // The URL that will connect to TECFA's MySQL server
-        // Syntax: jdbc:TYPE:machine:port/DB_NAME
         url = "jdbc:postgresql://tuxa.sme.utc/dblo17";
-        // dans certaines configurations locales il faut d�finir l'url par :
-        // url = "jdbc:postgresql://tuxa.sme.utc
         // ---- configure END
 
-        String requete = request.getParameter("requete");
+        String details = "";
 
-        // TODO normaliser requete
+        // get input textbox content
+        String requete = request.getParameter("r");
 
+        details += "Requête en langage naturel : " + requete + "\n";
+
+        // normalize it
         requete = normaliser(requete);
 
-        //
+        details += "Requête sql générée : " + requete + "\n";
+
+        StringBuilder errBuilder = new StringBuilder();
+        List<List<String>> resultTable = new ArrayList<>();
 
         if (requete != null) {
             // INSTALL/load the Driver (Vendor specific Code)
             try {
                 Class.forName("org.postgresql.Driver");
             } catch (java.lang.ClassNotFoundException e) {
-                System.err.print("ClassNotFoundException: ");
-                System.err.println(e.getMessage());
+                errBuilder.append("ClassNotFoundException: \n")
+                        .append(e.getMessage());
             }
             try {
                 Connection con;
@@ -66,42 +68,70 @@ public class LanceRequete extends HttpServlet {
                 stmt = con.createStatement();
                 // Send the query and bind to the result set
                 ResultSet rs = stmt.executeQuery(requete);
+                int total = 0;
                 ResultSetMetaData rsmd = rs.getMetaData();
                 nbre = rsmd.getColumnCount();
+                List<String> resultRow = new ArrayList<>();
+
+                // get Headers
+                for (int i = 1; i <= nbre; i++) {
+                    resultRow.add(rsmd.getColumnName(i));
+                }
+                resultTable.add(resultRow);
+                resultRow = new ArrayList<>();
+
                 while (rs.next()) {
+                    total++;
                     for (int i = 1; i <= nbre; i++) {
                         nom = rsmd.getColumnName(i);
                         String s = rs.getString(nom);
                         Pattern p = Pattern.compile("\\.htm");
     			        Matcher m = p.matcher(s);
-    			        if (m.lookingAt())
-    			        {
-    			        	responseWriter.print("<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>");
-    			        }
-    			        else{
-    			        	responseWriter.print(s);
-    			        }
+//    			        if (m.lookingAt())
+//    			        {
+//    			        	resultRow += "<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>";
+//    			        }
+//    			        else{
+//    			        	resultRow += s + " ";
+//    			        }
+
+                        resultRow.add(s);
                     }
-                    responseWriter.print("<p>");
+                    resultTable.add(resultRow);
+                    resultRow= new ArrayList<>();
                 }
-                responseWriter.println("</body>");
-                responseWriter.println("</html>");
+
+                if (total != 0)
+                    details += total + " résultats retournés.";
+
                 // Close resources
                 stmt.close();
                 con.close();
             }
-            // print responseWriter decent erreur messages
+            // print decent error messages
             catch (SQLException ex) {
-                System.err.println("==> SQLException: ");
+                errBuilder.append("\nUne erreur est survenue (SQLException): ");
                 while (ex != null) {
-                    System.out.println("Message:   " + ex.getMessage());
-                    System.out.println("SQLState:  " + ex.getSQLState());
-                    System.out.println("ErrorCode: " + ex.getErrorCode());
+                    errBuilder.append("\nMessage:   ").append(ex.getMessage());
+                    errBuilder.append("\nSQLState:  ").append(ex.getSQLState());
+                    errBuilder.append("\nErrorCode: ").append(ex.getErrorCode());
                     ex = ex.getNextException();
-                    System.out.println("");
+                    errBuilder.append("\n");
                 }
             }
         }
+
+        String errString = errBuilder.toString();
+        if (!errString.isEmpty())
+            request.setAttribute("err", errString);
+
+        if (!details.isEmpty())
+            request.setAttribute("det", details);
+
+        if (resultTable.size() > 1)
+            request.setAttribute("res", resultTable);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+        dispatcher.forward(request, response);
     }
 
     private String normaliser(String naturalLanguageQuery) {
