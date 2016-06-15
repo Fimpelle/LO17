@@ -50,8 +50,7 @@ public class LanceRequete extends HttpServlet {
         details += "Requête sql générée : " + requete + "\n";
 
         StringBuilder errBuilder = new StringBuilder();
-        List<String> resultList = new ArrayList<>();
-
+        List<List<String>> resultTable = new ArrayList<>();
 
         if (requete != null) {
             // INSTALL/load the Driver (Vendor specific Code)
@@ -72,7 +71,14 @@ public class LanceRequete extends HttpServlet {
                 int total = 0;
                 ResultSetMetaData rsmd = rs.getMetaData();
                 nbre = rsmd.getColumnCount();
-                String resultString = "";
+                List<String> resultRow = new ArrayList<>();
+
+                // get Headers
+                for (int i = 1; i <= nbre; i++) {
+                    resultRow.add(rsmd.getColumnName(i));
+                }
+                resultTable.add(resultRow);
+                resultRow = new ArrayList<>();
 
                 while (rs.next()) {
                     total++;
@@ -83,16 +89,16 @@ public class LanceRequete extends HttpServlet {
     			        Matcher m = p.matcher(s);
 //    			        if (m.lookingAt())
 //    			        {
-//    			        	resultString += "<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>";
+//    			        	resultRow += "<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>";
 //    			        }
 //    			        else{
-//    			        	resultString += s + " ";
+//    			        	resultRow += s + " ";
 //    			        }
 
-                        resultString += s + " ";
+                        resultRow.add(s);
                     }
-                    resultList.add(resultString.trim());
-                    resultString = "";
+                    resultTable.add(resultRow);
+                    resultRow= new ArrayList<>();
                 }
 
                 if (total != 0)
@@ -122,8 +128,8 @@ public class LanceRequete extends HttpServlet {
         if (!details.isEmpty())
             request.setAttribute("det", details);
 
-        if (resultList.size() > 0)
-            request.setAttribute("res", resultList);
+        if (resultTable.size() > 1)
+            request.setAttribute("res", resultTable);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }

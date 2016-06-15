@@ -34,13 +34,29 @@
 <%-- Display results, if any --%>
 <% if (request.getAttribute("res") != null) { %>
     <div id="results">
-        <ul>
-            <%
-            for (String s : (List<String>) request.getAttribute("res")) {
-                out.println("<li>" + s + "</li>");
-            }
-            %>
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <%
+                    for (String s : ((List<List<String>>) request.getAttribute("res")).get(0)) {
+                        out.println("<th>" + s + "</th>");
+                    }
+                    ((List<List<String>>) request.getAttribute("res")).remove(0);
+                    %>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                for (List<String> l : ((List<List<String>>) request.getAttribute("res"))) {
+                    out.println("<tr>");
+                    for (String s : l) {
+                        out.println("<td>" + s + "</td>");
+                    }
+                    out.println("</tr>");
+                }
+                %>
+            </tbody>
+        </table>
     </div>
 <% } %>
 </body>
