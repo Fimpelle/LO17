@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>LO17 - Recherche ADIT</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/todc-bootstrap.min.css">
@@ -39,26 +40,34 @@
     </div>
 </div>
 <div class="container">
-    <%-- Display errors, if any --%>
-    <% if (request.getAttribute("err") != null) { %>
-    <div id="errors" class="alert alert-danger">
-        <%
-            String s = (String) request.getAttribute("err");
-            s = s.replaceAll("\n", "<br />\n");
-            out.println(s);
-        %>
+    <div class="row">
+        <%-- Display errors, if any --%>
+        <% if (request.getAttribute("err") != null) { %>
+        <div id="errors" class="alert alert-danger col-lg-4 col-lg-offset-1">
+            <strong>Erreur</strong>
+            <div class="collapsed">
+                <%
+                    String s = (String) request.getAttribute("err");
+                    s = s.replaceAll("\n", "<br />\n");
+                    out.println(s);
+                %>
+            </div>
+        </div>
+        <% } %>
+        <%-- Display details, if any --%>
+        <% if (request.getAttribute("det") != null) { %>
+        <div class="alert alert-info col-lg-5 col-lg-offset-1">
+            <a data-toggle="collapse" href="#details" aria-expanded="false" aria-controls="details"><strong>D&eacute;tails...</strong></a>
+            <div class="collapse" id="details">
+            <%
+                String s = (String) request.getAttribute("det");
+                s = s.replaceAll("\n", "<br />\n");
+                out.println(s);
+            %>
+            </div>
+        </div>
+        <% } %>
     </div>
-    <% } %>
-    <%-- Display details, if any --%>
-    <% if (request.getAttribute("det") != null) { %>
-    <div id="details" class="alert alert-info">
-        <%
-            String s = (String) request.getAttribute("det");
-            s = s.replaceAll("\n", "<br />\n");
-            out.println(s);
-        %>
-    </div>
-    <% } %>
     <%-- Display results, if any --%>
     <% if (request.getAttribute("res") != null) { %>
     <div id="results">
@@ -88,5 +97,12 @@
     </div>
     <% } %>
 </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="${pageContext.request.contextPath}/res/js/bootstrap.min.js"></script>
 </body>
 </html>

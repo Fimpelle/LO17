@@ -1,6 +1,7 @@
 /* custom jumbotron */
 .jumbotron {
-    /*margin-bottom: 0px;*/
+    margin-bottom: 15px;
+    padding-bottom: 30px;
     background-size: cover;
     background: url(./img/stacked-files.jpg) no-repeat;
     color: white;
