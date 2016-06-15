@@ -3,8 +3,9 @@
 <html>
 <head>
     <title>LO17 - Recherche ADIT</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/bootstrap-min.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/todc-bootstrap-min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/bootstrap.min.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/todc-bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/res/style.css">
 </head>
 <body>
 <nav class="navbar navbar-masthead navbar-inverse navbar-fixed-top">
@@ -20,6 +21,7 @@
 				</div>
 			  </div>
 		</nav>
+<div class="container-fluid">
 <div id="search">
     <form action="${pageContext.request.contextPath}/servlet/LanceRequete" method="get">
         <input type="text" size="30" name="r" autocomplete=false autofocus=true>
@@ -74,5 +76,6 @@
         </table>
     </div>
 <% } %>
+</div>
 </body>
 </html>
