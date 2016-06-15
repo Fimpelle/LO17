@@ -37,13 +37,21 @@ public class LanceRequete extends HttpServlet {
         url = "jdbc:postgresql://tuxa.sme.utc/dblo17";
         // ---- configure END
 
+        String details = "";
+
         // get input textbox content
         String requete = request.getParameter("r");
+
+        details += "Requête en langage naturel : " + requete + "\n";
+
         // normalize it
         requete = normaliser(requete);
 
+        details += "Requête sql générée : " + requete + "\n";
+
         StringBuilder errBuilder = new StringBuilder();
         List<String> resultList = new ArrayList<>();
+
 
         if (requete != null) {
             // INSTALL/load the Driver (Vendor specific Code)
@@ -61,11 +69,13 @@ public class LanceRequete extends HttpServlet {
                 stmt = con.createStatement();
                 // Send the query and bind to the result set
                 ResultSet rs = stmt.executeQuery(requete);
+                int total = 0;
                 ResultSetMetaData rsmd = rs.getMetaData();
                 nbre = rsmd.getColumnCount();
                 String resultString = "";
 
                 while (rs.next()) {
+                    total++;
                     for (int i = 1; i <= nbre; i++) {
                         nom = rsmd.getColumnName(i);
                         String s = rs.getString(nom);
@@ -84,6 +94,10 @@ public class LanceRequete extends HttpServlet {
                     resultList.add(resultString.trim());
                     resultString = "";
                 }
+
+                if (total != 0)
+                    details += total + " résultats retournés.";
+
                 // Close resources
                 stmt.close();
                 con.close();
@@ -104,6 +118,9 @@ public class LanceRequete extends HttpServlet {
         String errString = errBuilder.toString();
         if (!errString.isEmpty())
             request.setAttribute("err", errString);
+
+        if (!details.isEmpty())
+            request.setAttribute("det", details);
 
         if (resultList.size() > 0)
             request.setAttribute("res", resultList);

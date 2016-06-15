@@ -25,22 +25,22 @@
 <% if (request.getAttribute("det") != null) { %>
 <div id="details">
     <%
-        for (String s : (List<String>) request.getAttribute("det")) {
-            out.println(s);
-        }
+        String s = (String) request.getAttribute("det");
+        s = s.replaceAll("\n", "<br />\n");
+        out.println(s);
     %>
 </div>
 <% } %>
 <%-- Display results, if any --%>
 <% if (request.getAttribute("res") != null) { %>
     <div id="results">
-    <%
-        out.println("<ul>");
-        for (String s : (List<String>) request.getAttribute("res")) {
-            out.println("<li>" + s + "</li>");
-        }
-        out.println("</ul>");
-    %>
+        <ul>
+            <%
+            for (String s : (List<String>) request.getAttribute("res")) {
+                out.println("<li>" + s + "</li>");
+            }
+            %>
+        </ul>
     </div>
 <% } %>
 </body>
