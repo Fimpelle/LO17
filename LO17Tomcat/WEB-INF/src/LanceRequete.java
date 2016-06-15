@@ -31,6 +31,8 @@ public class LanceRequete extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
 
         List<String> requestResult = new ArrayList<>();
 
@@ -46,15 +48,15 @@ public class LanceRequete extends HttpServlet {
         // get input textbox content
         String requete = request.getParameter("r");
 
-        details += "Requête en langage naturel : " + requete + "\n";
+        details += "Requête en langage naturel : " + requete;
 
         // normalize it
         NormaliserResult nResult;
         nResult = normaliser(requete);
         requete = nResult.getSqlRequest();
 
-        details += "Requête normalisée : " + nResult.getNormalized() + "\n";
-        details += "Requête sql générée : " + requete + "\n";
+        details += "\nRequête normalisée : " + nResult.getNormalized();
+        details += "\nRequête sql générée : " + requete;
 
         StringBuilder errBuilder = new StringBuilder();
         List<List<String>> resultTable = new ArrayList<>();
@@ -104,8 +106,8 @@ public class LanceRequete extends HttpServlet {
                     resultRow= new ArrayList<>();
                 }
 
-                if (total != 0)
-                    details += total + " résultats retournés.";
+                // insert total at first position
+                details = total + " résultats retournés.\n" + details;
 
                 // Close resources
                 stmt.close();
@@ -113,7 +115,7 @@ public class LanceRequete extends HttpServlet {
             }
             // print decent error messages
             catch (SQLException ex) {
-                errBuilder.append("\nUne erreur est survenue (SQLException): ");
+                errBuilder.append("Une erreur est survenue (SQLException): ");
                 while (ex != null) {
                     errBuilder.append("\nMessage:   ").append(ex.getMessage());
                     errBuilder.append("\nSQLState:  ").append(ex.getSQLState());
