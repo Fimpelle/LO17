@@ -23,6 +23,10 @@ public class LanceRequete extends HttpServlet {
     public String getLemmesFilePath(){
         return getServletContext().getRealPath("/WEB-INF/res/lemmes");
     }
+    
+    public String getBulletinsFilePath(){
+        return getServletContext().getRealPath("/WEB-INF/res/BULLETINS");
+    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -45,8 +49,11 @@ public class LanceRequete extends HttpServlet {
         details += "Requête en langage naturel : " + requete + "\n";
 
         // normalize it
-        requete = normaliser(requete);
+        NormaliserResult nResult;
+        nResult = normaliser(requete);
+        requete = nResult.getSqlRequest();
 
+        details += "Requête normalisée : " + nResult.getNormalized() + "\n";
         details += "Requête sql générée : " + requete + "\n";
 
         StringBuilder errBuilder = new StringBuilder();
@@ -87,14 +94,10 @@ public class LanceRequete extends HttpServlet {
                         String s = rs.getString(nom);
                         Pattern p = Pattern.compile("\\.htm");
     			        Matcher m = p.matcher(s);
-//    			        if (m.lookingAt())
-//    			        {
-//    			        	resultRow += "<a href=\"res/BULLETINS/" +s+ "\">"+s+ "</a>";
-//    			        }
-//    			        else{
-//    			        	resultRow += s + " ";
-//    			        }
-
+    			        if (m.lookingAt())
+    			        {
+    			        	s = "<a href=" + getBulletinsFilePath() +s+ "\">"+s+ "</a>";
+    			        }
                         resultRow.add(s);
                     }
                     resultTable.add(resultRow);
@@ -133,10 +136,30 @@ public class LanceRequete extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }
-
-    private String normaliser(String naturalLanguageQuery) {
-        Normalisator normalisator = new Normalisator(getLemmesFilePath());
+    
+    class NormaliserResult{
+    	String normalized;
+    	String sqlRequest;
+    	
+    	public String getNormalized(){
+    		return normalized;
+    	}
+    	public void setNormalized(String normalized){
+    		this.normalized=normalized;
+    	}
+    	public String getSqlRequest(){
+    		return sqlRequest;
+    	}
+    	public void setSqlRequest(String sqlRequest){
+    		this.sqlRequest=sqlRequest;
+    	}
+    }
+    
+    private NormaliserResult normaliser(String naturalLanguageQuery) {
+        NormaliserResult result = new NormaliserResult();
+    	Normalisator normalisator = new Normalisator(getLemmesFilePath());
         String normalizedQuery = normalisator.normalize(naturalLanguageQuery);
+        result.setNormalized(normalizedQuery);
 
         try {
             lo17SqlGrammarLexer lexer = new lo17SqlGrammarLexer(new ANTLRReaderStream(new StringReader(normalizedQuery)));
@@ -148,10 +171,13 @@ public class LanceRequete extends HttpServlet {
 
             System.out.println(sqlQuery);
 
-            return sqlQuery;
+            result.setSqlRequest(sqlQuery);
+            return result;
         } catch (Exception e) {
 
         }
+        
+        
 
 
         return null;

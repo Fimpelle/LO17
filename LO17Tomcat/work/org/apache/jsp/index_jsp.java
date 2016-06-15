@@ -56,71 +56,106 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("    <title>LO17 - Recherche ADIT</title>\r\n");
-      out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"");
+      out.write("    <link rel=\"stylesheet\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
-      out.write("/res/style.css\"/>\r\n");
+      out.write("/res/css/bootstrap.min.css\">\r\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/res/css/todc-bootstrap.min.css\">\r\n");
+      out.write("    <link rel=\"stylesheet\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/res/style.css\">\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
-      out.write("<div id=\"search\">\r\n");
-      out.write("    <form action=\"");
+      out.write("<nav class=\"navbar navbar-masthead navbar-inverse navbar-fixed-top\">\r\n");
+      out.write("    <div class=\"container\">\r\n");
+      out.write("        <div class=\"navbar-header\">\r\n");
+      out.write("            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\"\r\n");
+      out.write("                    aria-expanded=\"false\" aria-controls=\"navbar\">\r\n");
+      out.write("                <span class=\"sr-only\">Toggle navigation</span>\r\n");
+      out.write("                <span class=\"icon-bar\"></span>\r\n");
+      out.write("                <span class=\"icon-bar\"></span>\r\n");
+      out.write("                <span class=\"icon-bar\"></span>\r\n");
+      out.write("            </button>\r\n");
+      out.write("            <a class=\"navbar-brand\" href=\"#\">LO17 requestator</a>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("</nav>\r\n");
+      out.write("<div class=\"container-fluid\">\r\n");
+      out.write("    <div class=\"jumbotron\">\r\n");
+      out.write("        <div id=\"search\" class=\"\">\r\n");
+      out.write("            <h1>Corpus ADIT</h1>\r\n");
+      out.write("            <form class=\"form-inline\" action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/servlet/LanceRequete\" method=\"get\">\r\n");
-      out.write("        <input type=\"text\" size=\"30\" name=\"r\" autocomplete=false autofocus=true>\r\n");
-      out.write("        <input type=\"submit\" value=\"Rechercher\">\r\n");
-      out.write("    </form>\r\n");
-      out.write("</div>\r\n");
-      out.write('\r');
-      out.write('\n');
+      out.write("                <div class=\"input-group input-group-lg\">\r\n");
+      out.write("                    <input type=\"text\" name=\"r\" class=\"form-control\"\r\n");
+      out.write("                           placeholder=\"Rechercher dans le corpus...\" size=\"50\" autofocus=\"true\" autocomplete=\"false\"/>\r\n");
+      out.write("                    <div class=\"input-group-btn\">\r\n");
+      out.write("                        <button class=\"btn btn-primary\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i>\r\n");
+      out.write("                        </button>\r\n");
+      out.write("                    </div>\r\n");
+      out.write("                </div>\r\n");
+      out.write("                ");
+      out.write("\r\n");
+      out.write("            </form>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
  if (request.getAttribute("err") != null) { 
       out.write("\r\n");
-      out.write("<div id=\"errors\">\r\n");
-      out.write("    ");
+      out.write("    <div id=\"errors\" class=\"alert alert-danger\">\r\n");
+      out.write("        ");
 
-        String s = (String) request.getAttribute("err");
-        s = s.replaceAll("\n", "<br />\n");
-        out.println(s);
-    
+            String s = (String) request.getAttribute("err");
+            s = s.replaceAll("\n", "<br />\n");
+            out.println(s);
+        
       out.write("\r\n");
-      out.write("</div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    ");
  } 
-      out.write('\r');
-      out.write('\n');
-      out.write('\r');
-      out.write('\n');
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
  if (request.getAttribute("det") != null) { 
       out.write("\r\n");
-      out.write("<div id=\"details\">\r\n");
-      out.write("    ");
+      out.write("    <div id=\"details\" class=\"alert alert-info\">\r\n");
+      out.write("        ");
 
-        String s = (String) request.getAttribute("det");
-        s = s.replaceAll("\n", "<br />\n");
-        out.println(s);
-    
+            String s = (String) request.getAttribute("det");
+            s = s.replaceAll("\n", "<br />\n");
+            out.println(s);
+        
       out.write("\r\n");
-      out.write("</div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    ");
  } 
-      out.write('\r');
-      out.write('\n');
-      out.write('\r');
-      out.write('\n');
+      out.write("\r\n");
+      out.write("    ");
+      out.write("\r\n");
+      out.write("    ");
  if (request.getAttribute("res") != null) { 
       out.write("\r\n");
       out.write("    <div id=\"results\">\r\n");
-      out.write("        <table>\r\n");
+      out.write("        <table class=\"table table-bordered table-striped table-condensed\">\r\n");
       out.write("            <thead>\r\n");
-      out.write("                <tr>\r\n");
-      out.write("                    ");
+      out.write("            <tr>\r\n");
+      out.write("                ");
 
                     for (String s : ((List<List<String>>) request.getAttribute("res")).get(0)) {
                         out.println("<th>" + s + "</th>");
                     }
                     ((List<List<String>>) request.getAttribute("res")).remove(0);
-                    
+                
       out.write("\r\n");
-      out.write("                </tr>\r\n");
+      out.write("            </tr>\r\n");
       out.write("            </thead>\r\n");
       out.write("            <tbody>\r\n");
-      out.write("                ");
+      out.write("            ");
 
                 for (List<String> l : ((List<List<String>>) request.getAttribute("res"))) {
                     out.println("<tr>");
@@ -129,13 +164,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
                     }
                     out.println("</tr>");
                 }
-                
+            
       out.write("\r\n");
       out.write("            </tbody>\r\n");
       out.write("        </table>\r\n");
       out.write("    </div>\r\n");
+      out.write("    ");
  } 
       out.write("\r\n");
+      out.write("</div>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
