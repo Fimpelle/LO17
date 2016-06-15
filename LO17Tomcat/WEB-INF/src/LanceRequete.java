@@ -110,7 +110,7 @@ public class LanceRequete extends HttpServlet {
             }
             // print decent error messages
             catch (SQLException ex) {
-                errBuilder.append("\nUne erreur est survenue (SQLException): ");
+                errBuilder.append("Une erreur est survenue (SQLException): ");
                 while (ex != null) {
                     errBuilder.append("\nMessage:   ").append(ex.getMessage());
                     errBuilder.append("\nSQLState:  ").append(ex.getSQLState());

@@ -22,23 +22,23 @@
         </div>
     </div>
 </nav>
-<div class="container-fluid">
-    <div class="jumbotron">
-        <div id="search" class="">
-            <h1>Corpus ADIT</h1>
-            <form class="form-inline" action="${pageContext.request.contextPath}/servlet/LanceRequete" method="get">
-                <div class="input-group input-group-lg">
-                    <input type="text" name="r" class="form-control"
-                           placeholder="Rechercher dans le corpus..." size="50" autofocus="true" autocomplete="false"/>
-                    <div class="input-group-btn">
-                        <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </div>
+<div class="jumbotron">
+    <div id="search" class="container">
+        <h1>Corpus ADIT</h1>
+        <form class="form-inline" action="${pageContext.request.contextPath}/servlet/LanceRequete" method="get">
+            <div class="input-group input-group-lg">
+                <input type="text" name="r" class="form-control"
+                       placeholder="Rechercher dans le corpus..." size="50" autofocus="true" autocomplete="false"/>
+                <div class="input-group-btn">
+                    <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i>
+                    </button>
                 </div>
-                <%--<input type="submit" class="btn btn-primary"/>--%>
-            </form>
-        </div>
+            </div>
+            <%--<input type="submit" class="btn btn-primary"/>--%>
+        </form>
     </div>
+</div>
+
     <%-- Display errors, if any --%>
     <% if (request.getAttribute("err") != null) { %>
     <div id="errors" class="alert alert-danger">
