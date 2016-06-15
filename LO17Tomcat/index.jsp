@@ -41,7 +41,7 @@
     </div>
     <%-- Display errors, if any --%>
     <% if (request.getAttribute("err") != null) { %>
-    <div id="errors">
+    <div id="errors" class="alert alert-danger">
         <%
             String s = (String) request.getAttribute("err");
             s = s.replaceAll("\n", "<br />\n");
@@ -51,7 +51,7 @@
     <% } %>
     <%-- Display details, if any --%>
     <% if (request.getAttribute("det") != null) { %>
-    <div id="details">
+    <div id="details" class="alert alert-info">
         <%
             String s = (String) request.getAttribute("det");
             s = s.replaceAll("\n", "<br />\n");
