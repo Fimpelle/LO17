@@ -45,6 +45,9 @@ WS  : (' ' |'\t' | '\r' | 'je' | 'qui' | 'dont') {skip();} | '\n'
 VAR : ('A'..'Z' | 'a'..'z'|'\u00a0'..'\u00ff')(('a'..'z')|('0'..'9')|'-'|('\u00a0'..'\u00ff'))+
 ;
 
+ANNEE  	:  ('0'..'9')('0'..'9')('0'..'9')('0'..'9')
+;
+
 listerequetes returns [String sql = ""]
 	@init	{Arbre lr_arbre;}: 
 		r = requete
@@ -58,7 +61,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 	@init {Arbre ps_arbre;} :
 	
 	// Je veux les articles qui parlent de X
-	SELECT? ARTICLE MOT ps=params {
+	SELECT? ARTICLE MOT ps=paramsMot {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 		req_arbre.ajouteFils(new Arbre("","fichier"));
 		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
@@ -67,7 +70,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		req_arbre.ajouteFils(ps_arbre);
 	}
 	// Je veux les bulletins qui parlent de X
-	| SELECT? BULLETIN MOT ps=params {
+	| SELECT? BULLETIN MOT ps=paramsMot {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 		req_arbre.ajouteFils(new Arbre("","numero"));
 		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
@@ -76,7 +79,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		req_arbre.ajouteFils(ps_arbre);
 	}
 	// nomber d'articles contenant le mot X
-	| SELECT? COUNT ARTICLE MOT ps=params {
+	| SELECT? COUNT ARTICLE MOT ps=paramsMot {
 		req_arbre.ajouteFils(new Arbre("","SELECT COUNT(DISTINCT fichier)"));
 		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
 		req_arbre.ajouteFils(new Arbre("","WHERE"));
@@ -84,7 +87,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		req_arbre.ajouteFils(ps_arbre);
 	}  
 	// nombre de bulletins contenant le mot X
-	| SELECT? COUNT BULLETIN MOT ps=params {
+	| SELECT? COUNT BULLETIN MOT ps=paramsMot {
 		req_arbre.ajouteFils(new Arbre("","SELECT COUNT(DISTINCT numero)"));
 		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
 		req_arbre.ajouteFils(new Arbre("","WHERE"));
@@ -92,7 +95,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		req_arbre.ajouteFils(ps_arbre);
 	}
 	// Quels sont les articles qui ont pour sujet X
-	| SELECT? ARTICLE TITRE ps=params {
+	| SELECT? ARTICLE TITRE ps=paramsMot {
 		req_arbre.ajouteFils(new Arbre("","SELECT"));
 		req_arbre.ajouteFils(new Arbre("","fichier"));
 		req_arbre.ajouteFils(new Arbre("","FROM titre"));
@@ -114,20 +117,20 @@ requete returns [Arbre req_arbre = new Arbre("")]
 	}
 ;
 
-params returns [Arbre les_pars_arbre = new Arbre("")]
+paramsMot returns [Arbre les_pars_arbre = new Arbre("")]
 	@init	{Arbre par1_arbre, par2_arbre;} : 
-		par1 = param 
+		par1 = paramMot 
 			{
 				par1_arbre = $par1.lepar_arbre;
 				les_pars_arbre.ajouteFils(par1_arbre);
 			}
-		(CONJOU par2 = param
+		(CONJOU par2 = paramMot
 			{
 				par2_arbre = $par2.lepar_arbre;
 				les_pars_arbre.ajouteFils(new Arbre("", "OR"));
 				les_pars_arbre.ajouteFils(par2_arbre);
 			}
-		| CONJET par2 = param
+		| CONJET par2 = paramMot
 			{
 				par2_arbre = $par2.lepar_arbre;
 				les_pars_arbre.ajouteFils(new Arbre("", "AND"));
@@ -136,8 +139,35 @@ params returns [Arbre les_pars_arbre = new Arbre("")]
 		)*
 ;
 
-param returns [Arbre lepar_arbre = new Arbre("")] :
+paramMot returns [Arbre lepar_arbre = new Arbre("")] :
 	a = VAR
 		{ lepar_arbre.ajouteFils(new Arbre("mot =", "'"+a.getText()+"'"));}
 ;
 
+
+paramsAnnee returns [Arbre les_pars_arbre = new Arbre("")]
+	@init	{Arbre par1_arbre, par2_arbre;} : 
+		par1 = paramAnnee 
+			{
+				par1_arbre = $par1.lepar_arbre;
+				les_pars_arbre.ajouteFils(par1_arbre);
+			}
+		(CONJOU par2 = paramAnnee
+			{
+				par2_arbre = $par2.lepar_arbre;
+				les_pars_arbre.ajouteFils(new Arbre("", "OR"));
+				les_pars_arbre.ajouteFils(par2_arbre);
+			}
+		| CONJET par2 = paramAnnee
+			{
+				par2_arbre = $par2.lepar_arbre;
+				les_pars_arbre.ajouteFils(new Arbre("", "AND"));
+				les_pars_arbre.ajouteFils(par2_arbre);
+			}
+		)*
+;
+
+paramAnnee returns [Arbre lepar_arbre = new Arbre("")] :
+	a = VAR
+		{ lepar_arbre.ajouteFils(new Arbre("mot =", "'"+a.getText()+"'"));}
+;
