@@ -34,7 +34,7 @@
         <form class="form-inline" action="${pageContext.request.contextPath}/servlet/LanceRequete" method="get">
             <div class="input-group input-group-lg">
                 <input type="text" name="r" class="form-control"
-                       placeholder="Rechercher..." size="50" autofocus="true" autocomplete="false"
+                       placeholder="Rechercher..." size="50" autofocus=true autocomplete="off"
                 <% if (request.getParameter("r") != null) out.print("value=\""+(String) request.getParameter("r")+"\""); %>
                 />
                 <div class="input-group-btn">
@@ -42,7 +42,26 @@
                     </button>
                 </div>
             </div>
-            <%--<input type="submit" class="btn btn-primary"/>--%>
+            <div class="dropdown input-group input-group-lg col-sm-offset-1">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    Exemples
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Tous+les+articles">
+                        1. Tous les articles</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
+                        2. Je veux les articles qui parlent d'airbus</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
+                        3. Je veux les articles qui parlent d'airbus</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
+                        4. Je veux les articles qui parlent d'airbus</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
+                        5. Je veux les articles qui parlent d'airbus</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
+                        6. Je veux les articles qui parlent d'airbus</a></li>
+                </ul>
+            </div>
         </form>
     </div>
 </div>
