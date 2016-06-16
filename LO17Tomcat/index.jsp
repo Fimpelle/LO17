@@ -30,11 +30,13 @@
 </nav>
 <div class="jumbotron">
     <div id="search" class="container">
-        <h1>Corpus ADIT</h1>
+        <h2>Rechercher parmi les bulletins &eacute;lectroniques de l'ADIT</h2>
         <form class="form-inline" action="${pageContext.request.contextPath}/servlet/LanceRequete" method="get">
             <div class="input-group input-group-lg">
                 <input type="text" name="r" class="form-control"
-                       placeholder="Rechercher dans le corpus..." size="50" autofocus="true" autocomplete="false"/>
+                       placeholder="Rechercher..." size="50" autofocus="true" autocomplete="false"
+                <% if (request.getParameter("r") != null) out.print("value=\""+(String) request.getParameter("r")+"\""); %>
+                />
                 <div class="input-group-btn">
                     <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i>
                     </button>
@@ -48,7 +50,7 @@
     <div class="row">
         <%-- Display errors, if any --%>
         <% if (request.getAttribute("err") != null) { %>
-        <div id="errors" class="alert alert-danger col-lg-4 col-lg-offset-1">
+        <div id="errors" class="alert alert-danger col-sm-4 col-sm-offset-1">
             <strong>Erreur</strong>
             <div class="collapsed">
                 <%
@@ -61,7 +63,7 @@
         <% } %>
         <%-- Display details, if any --%>
         <% if (request.getAttribute("det") != null) { %>
-        <div class="alert alert-info col-lg-5 col-lg-offset-1">
+        <div class="alert alert-info col-sm-5 col-sm-offset-1">
             <a data-toggle="collapse" href="#details" aria-expanded="false" aria-controls="details"><strong>D&eacute;tails...</strong></a>
             <div class="collapse" id="details">
             <%
