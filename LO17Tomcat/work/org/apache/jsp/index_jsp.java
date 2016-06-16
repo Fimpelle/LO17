@@ -4,6 +4,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import java.util.List;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -52,9 +54,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
 
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
+      out.write("    <meta charset=\"UTF-8\">\r\n");
       out.write("    <title>LO17 - Recherche ADIT</title>\r\n");
       out.write("    <link rel=\"stylesheet\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
@@ -77,64 +82,75 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <span class=\"icon-bar\"></span>\r\n");
       out.write("                <span class=\"icon-bar\"></span>\r\n");
       out.write("            </button>\r\n");
-      out.write("            <a class=\"navbar-brand\" href=\"#\">LO17 requestator</a>\r\n");
+      out.write("            <a class=\"navbar-brand\" href=\"#\">LO17 Requestator</a>\r\n");
+      out.write("        </div>\r\n");
+      out.write("        <div class=\"navbar-collapse collapse navbar-right\">\r\n");
+      out.write("            <p class=\"navbar-text\">UTC, P16 - Florian Impellettieri, Jean Vintache</p>\r\n");
       out.write("        </div>\r\n");
       out.write("    </div>\r\n");
       out.write("</nav>\r\n");
-      out.write("<div class=\"container-fluid\">\r\n");
-      out.write("    <div class=\"jumbotron\">\r\n");
-      out.write("        <div id=\"search\" class=\"\">\r\n");
-      out.write("            <h1>Corpus ADIT</h1>\r\n");
-      out.write("            <form class=\"form-inline\" action=\"");
+      out.write("<div class=\"jumbotron\">\r\n");
+      out.write("    <div id=\"search\" class=\"container\">\r\n");
+      out.write("        <h1>Corpus ADIT</h1>\r\n");
+      out.write("        <form class=\"form-inline\" action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/servlet/LanceRequete\" method=\"get\">\r\n");
-      out.write("                <div class=\"input-group input-group-lg\">\r\n");
-      out.write("                    <input type=\"text\" name=\"r\" class=\"form-control\"\r\n");
-      out.write("                           placeholder=\"Rechercher dans le corpus...\" size=\"50\" autofocus=\"true\" autocomplete=\"false\"/>\r\n");
-      out.write("                    <div class=\"input-group-btn\">\r\n");
-      out.write("                        <button class=\"btn btn-primary\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i>\r\n");
-      out.write("                        </button>\r\n");
-      out.write("                    </div>\r\n");
+      out.write("            <div class=\"input-group input-group-lg\">\r\n");
+      out.write("                <input type=\"text\" name=\"r\" class=\"form-control\"\r\n");
+      out.write("                       placeholder=\"Rechercher dans le corpus...\" size=\"50\" autofocus=\"true\" autocomplete=\"false\"/>\r\n");
+      out.write("                <div class=\"input-group-btn\">\r\n");
+      out.write("                    <button class=\"btn btn-primary\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i>\r\n");
+      out.write("                    </button>\r\n");
       out.write("                </div>\r\n");
-      out.write("                ");
+      out.write("            </div>\r\n");
+      out.write("            ");
       out.write("\r\n");
-      out.write("            </form>\r\n");
-      out.write("        </div>\r\n");
+      out.write("        </form>\r\n");
       out.write("    </div>\r\n");
-      out.write("    ");
+      out.write("</div>\r\n");
+      out.write("<div class=\"container\">\r\n");
+      out.write("    <div class=\"row\">\r\n");
+      out.write("        ");
       out.write("\r\n");
-      out.write("    ");
+      out.write("        ");
  if (request.getAttribute("err") != null) { 
       out.write("\r\n");
-      out.write("    <div id=\"errors\" class=\"alert alert-danger\">\r\n");
-      out.write("        ");
+      out.write("        <div id=\"errors\" class=\"alert alert-danger col-lg-4 col-lg-offset-1\">\r\n");
+      out.write("            <strong>Erreur</strong>\r\n");
+      out.write("            <div class=\"collapsed\">\r\n");
+      out.write("                ");
 
-            String s = (String) request.getAttribute("err");
-            s = s.replaceAll("\n", "<br />\n");
-            out.println(s);
-        
+                    String s = (String) request.getAttribute("err");
+                    s = s.replaceAll("\n", "<br />\n");
+                    out.println(s);
+                
       out.write("\r\n");
-      out.write("    </div>\r\n");
-      out.write("    ");
+      out.write("            </div>\r\n");
+      out.write("        </div>\r\n");
+      out.write("        ");
  } 
       out.write("\r\n");
-      out.write("    ");
+      out.write("        ");
       out.write("\r\n");
-      out.write("    ");
+      out.write("        ");
  if (request.getAttribute("det") != null) { 
       out.write("\r\n");
-      out.write("    <div id=\"details\" class=\"alert alert-info\">\r\n");
-      out.write("        ");
+      out.write("        <div class=\"alert alert-info col-lg-5 col-lg-offset-1\">\r\n");
+      out.write("            <a data-toggle=\"collapse\" href=\"#details\" aria-expanded=\"false\" aria-controls=\"details\"><strong>D&eacute;tails...</strong></a>\r\n");
+      out.write("            <div class=\"collapse\" id=\"details\">\r\n");
+      out.write("            ");
 
-            String s = (String) request.getAttribute("det");
-            s = s.replaceAll("\n", "<br />\n");
-            out.println(s);
-        
+                String s = (String) request.getAttribute("det");
+                s = s.replaceAll("\n", "<br />\n");
+                out.println(s);
+            
       out.write("\r\n");
-      out.write("    </div>\r\n");
-      out.write("    ");
+      out.write("            </div>\r\n");
+      out.write("        </div>\r\n");
+      out.write("        ");
  } 
       out.write("\r\n");
+      out.write("    </div>\r\n");
       out.write("    ");
       out.write("\r\n");
       out.write("    ");
@@ -160,6 +176,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
                 for (List<String> l : ((List<List<String>>) request.getAttribute("res"))) {
                     out.println("<tr>");
                     for (String s : l) {
+                        // add links if possible
+                        Pattern p = Pattern.compile("(\\w+\\.htm)");
+                        Matcher m = p.matcher(s);
+                        if (m.find()) {
+                            // replace first number with "number" and second number with the first
+                            s = m.replaceFirst("<a href=\"" + request.getContextPath() + "/res/BULLETINS/$1\">"+ s +"</a>");
+                        }
                         out.println("<td>" + s + "</td>");
                     }
                     out.println("</tr>");
@@ -173,6 +196,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
  } 
       out.write("\r\n");
       out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("<!-- Bootstrap core JavaScript\r\n");
+      out.write("================================================== -->\r\n");
+      out.write("<!-- Placed at the end of the document so the pages load faster -->\r\n");
+      out.write("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\"></script>\r\n");
+      out.write("<script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery.min.js\"><\\/script>')</script>\r\n");
+      out.write("<script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("/res/js/bootstrap.min.js\"></script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
