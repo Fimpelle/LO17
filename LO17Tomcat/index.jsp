@@ -21,7 +21,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">LO17 requestator</a>
+            <a class="navbar-brand" href="#">LO17 Requestator</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+            <p class="navbar-text">UTC, P16 - Florian Impellettieri, Jean Vintache</p>
         </div>
     </div>
 </nav>
