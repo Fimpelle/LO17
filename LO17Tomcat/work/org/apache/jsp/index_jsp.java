@@ -91,13 +91,17 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</nav>\r\n");
       out.write("<div class=\"jumbotron\">\r\n");
       out.write("    <div id=\"search\" class=\"container\">\r\n");
-      out.write("        <h1>Corpus ADIT</h1>\r\n");
+      out.write("        <h2>Rechercher parmi les bulletins &eacute;lectroniques de l'ADIT</h2>\r\n");
       out.write("        <form class=\"form-inline\" action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("/servlet/LanceRequete\" method=\"get\">\r\n");
       out.write("            <div class=\"input-group input-group-lg\">\r\n");
       out.write("                <input type=\"text\" name=\"r\" class=\"form-control\"\r\n");
-      out.write("                       placeholder=\"Rechercher dans le corpus...\" size=\"50\" autofocus=\"true\" autocomplete=\"false\"/>\r\n");
+      out.write("                       placeholder=\"Rechercher...\" size=\"50\" autofocus=\"true\" autocomplete=\"false\"\r\n");
+      out.write("                ");
+ if (request.getParameter("r") != null) out.print("value=\""+(String) request.getParameter("r")+"\""); 
+      out.write("\r\n");
+      out.write("                />\r\n");
       out.write("                <div class=\"input-group-btn\">\r\n");
       out.write("                    <button class=\"btn btn-primary\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i>\r\n");
       out.write("                    </button>\r\n");
@@ -115,7 +119,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        ");
  if (request.getAttribute("err") != null) { 
       out.write("\r\n");
-      out.write("        <div id=\"errors\" class=\"alert alert-danger col-lg-4 col-lg-offset-1\">\r\n");
+      out.write("        <div id=\"errors\" class=\"alert alert-danger col-sm-4 col-sm-offset-1\">\r\n");
       out.write("            <strong>Erreur</strong>\r\n");
       out.write("            <div class=\"collapsed\">\r\n");
       out.write("                ");
@@ -135,7 +139,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        ");
  if (request.getAttribute("det") != null) { 
       out.write("\r\n");
-      out.write("        <div class=\"alert alert-info col-lg-5 col-lg-offset-1\">\r\n");
+      out.write("        <div class=\"alert alert-info col-sm-5 col-sm-offset-1\">\r\n");
       out.write("            <a data-toggle=\"collapse\" href=\"#details\" aria-expanded=\"false\" aria-controls=\"details\"><strong>D&eacute;tails...</strong></a>\r\n");
       out.write("            <div class=\"collapse\" id=\"details\">\r\n");
       out.write("            ");
