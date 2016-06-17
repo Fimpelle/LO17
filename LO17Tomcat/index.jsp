@@ -60,6 +60,8 @@
                         5. combien d'article sur l'inovation ou l'automovile</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=afficher+la+list+des+rubbriques+des+articles+traitent+de+société">
                         6. afficher la list des rubbriques des articles traitent de société</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=lister+les+articles+dont+la+rubrique+contient+innovation">
+                        7. lister les articles dont la rubrique contient innovation</a></li>
                 </ul>
             </div>
         </form>

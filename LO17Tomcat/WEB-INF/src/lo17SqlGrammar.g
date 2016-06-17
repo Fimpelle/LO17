@@ -229,6 +229,22 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}
+	| ARTICLE AVOIR? RUBRIQUE MOT ps=paramsRubrique {
+		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+		req_arbre.ajouteFils(new Arbre("","fichier"));
+		req_arbre.ajouteFils(new Arbre("","FROM rubrique"));
+		req_arbre.ajouteFils(new Arbre("","WHERE"));
+		ps_arbre = $ps.les_pars_arbre;
+		req_arbre.ajouteFils(ps_arbre);
+	}
+	| BULLETIN AVOIR? RUBRIQUE MOT ps=paramsRubrique {
+		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+		req_arbre.ajouteFils(new Arbre("","numero"));
+		req_arbre.ajouteFils(new Arbre("","FROM rubrique"));
+		req_arbre.ajouteFils(new Arbre("","WHERE"));
+		ps_arbre = $ps.les_pars_arbre;
+		req_arbre.ajouteFils(ps_arbre);
+	}
 	// Je veux les bulletins qui parlent de X
 	| BULLETIN AVOIR? MOT ps=paramsMot {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
@@ -345,6 +361,33 @@ paramsMot returns [Arbre les_pars_arbre = new Arbre("")]
 paramMot returns [Arbre lepar_arbre = new Arbre("")] :
 	a = VAR
 		{ lepar_arbre.ajouteFils(new Arbre("mot =", "'"+a.getText()+"'"));}
+;
+
+paramsRubrique returns [Arbre les_pars_arbre = new Arbre("")]
+	@init	{Arbre par1_arbre, par2_arbre;} : 
+		par1 = paramRubrique 
+			{
+				par1_arbre = $par1.lepar_arbre;
+				les_pars_arbre.ajouteFils(par1_arbre);
+			}
+		(CONJOU par2 = paramRubrique
+			{
+				par2_arbre = $par2.lepar_arbre;
+				les_pars_arbre.ajouteFils(new Arbre("", "OR"));
+				les_pars_arbre.ajouteFils(par2_arbre);
+			}
+		| CONJET? par2 = paramRubrique
+			{
+				par2_arbre = $par2.lepar_arbre;
+				les_pars_arbre.ajouteFils(new Arbre("", "AND"));
+				les_pars_arbre.ajouteFils(par2_arbre);
+			}
+		)*
+;
+
+paramRubrique returns [Arbre lepar_arbre = new Arbre("")] :
+	a = VAR
+		{ lepar_arbre.ajouteFils(new Arbre("LOWER(rubrique) LIKE", "'\%"+a.getText()+"\%'"));}
 ;
 
 

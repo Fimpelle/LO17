@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g 2016-06-17 11:56:03
+// $ANTLR 3.5.1 C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g 2016-06-17 12:35:22
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -90,7 +90,7 @@ public class lo17SqlGrammarParser extends Parser {
 
 
 	// $ANTLR start "requete"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:66:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( SELECT )* ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ) ;
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:66:1: requete returns [Arbre req_arbre = new Arbre(\"\")] : ( SELECT )* ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ) ;
 	public final Arbre requete() throws RecognitionException {
 		Arbre req_arbre =  new Arbre("");
 
@@ -102,8 +102,8 @@ public class lo17SqlGrammarParser extends Parser {
 
 		Arbre ps_arbre;
 		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:67:26: ( ( SELECT )* ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ) )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:79:2: ( SELECT )* ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:67:26: ( ( SELECT )* ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ) )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:79:2: ( SELECT )* ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween )
 			{
 			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:79:2: ( SELECT )*
 			loop1:
@@ -127,10 +127,10 @@ public class lo17SqlGrammarParser extends Parser {
 				}
 			}
 
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:79:10: ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween )
-			int alt60=20;
-			alt60 = dfa60.predict(input);
-			switch (alt60) {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:79:10: ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween )
+			int alt62=22;
+			alt62 = dfa62.predict(input);
+			switch (alt62) {
 				case 1 :
 					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:79:11: ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot )
 					{
@@ -1414,10 +1414,10 @@ public class lo17SqlGrammarParser extends Parser {
 					}
 					break;
 				case 11 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:233:4: BULLETIN ( AVOIR )? MOT ps= paramsMot
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:232:4: ARTICLE ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique
 					{
-					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete962); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:233:13: ( AVOIR )?
+					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete960); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:232:12: ( AVOIR )?
 					int alt50=2;
 					int LA50_0 = input.LA(1);
 					if ( (LA50_0==AVOIR) ) {
@@ -1425,16 +1425,88 @@ public class lo17SqlGrammarParser extends Parser {
 					}
 					switch (alt50) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:233:13: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:232:12: AVOIR
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete964); 
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete962); 
 							}
 							break;
 
 					}
 
+					match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete965); 
 					match(input,MOT,FOLLOW_MOT_in_requete967); 
-					pushFollow(FOLLOW_paramsMot_in_requete971);
+					pushFollow(FOLLOW_paramsRubrique_in_requete971);
+					ps=paramsRubrique();
+					state._fsp--;
+
+
+							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+							req_arbre.ajouteFils(new Arbre("","fichier"));
+							req_arbre.ajouteFils(new Arbre("","FROM rubrique"));
+							req_arbre.ajouteFils(new Arbre("","WHERE"));
+							ps_arbre = ps;
+							req_arbre.ajouteFils(ps_arbre);
+						
+					}
+					break;
+				case 12 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:240:4: BULLETIN ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique
+					{
+					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete978); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:240:13: ( AVOIR )?
+					int alt51=2;
+					int LA51_0 = input.LA(1);
+					if ( (LA51_0==AVOIR) ) {
+						alt51=1;
+					}
+					switch (alt51) {
+						case 1 :
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:240:13: AVOIR
+							{
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete980); 
+							}
+							break;
+
+					}
+
+					match(input,RUBRIQUE,FOLLOW_RUBRIQUE_in_requete983); 
+					match(input,MOT,FOLLOW_MOT_in_requete985); 
+					pushFollow(FOLLOW_paramsRubrique_in_requete989);
+					ps=paramsRubrique();
+					state._fsp--;
+
+
+							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+							req_arbre.ajouteFils(new Arbre("","numero"));
+							req_arbre.ajouteFils(new Arbre("","FROM rubrique"));
+							req_arbre.ajouteFils(new Arbre("","WHERE"));
+							ps_arbre = ps;
+							req_arbre.ajouteFils(ps_arbre);
+						
+					}
+					break;
+				case 13 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:249:4: BULLETIN ( AVOIR )? MOT ps= paramsMot
+					{
+					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete998); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:249:13: ( AVOIR )?
+					int alt52=2;
+					int LA52_0 = input.LA(1);
+					if ( (LA52_0==AVOIR) ) {
+						alt52=1;
+					}
+					switch (alt52) {
+						case 1 :
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:249:13: AVOIR
+							{
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1000); 
+							}
+							break;
+
+					}
+
+					match(input,MOT,FOLLOW_MOT_in_requete1003); 
+					pushFollow(FOLLOW_paramsMot_in_requete1007);
 					ps=paramsMot();
 					state._fsp--;
 
@@ -1448,29 +1520,29 @@ public class lo17SqlGrammarParser extends Parser {
 						
 					}
 					break;
-				case 12 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:242:4: COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot
+				case 14 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:258:4: COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot
 					{
-					match(input,COUNT,FOLLOW_COUNT_in_requete980); 
-					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete982); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:242:18: ( AVOIR )?
-					int alt51=2;
-					int LA51_0 = input.LA(1);
-					if ( (LA51_0==AVOIR) ) {
-						alt51=1;
+					match(input,COUNT,FOLLOW_COUNT_in_requete1016); 
+					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1018); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:258:18: ( AVOIR )?
+					int alt53=2;
+					int LA53_0 = input.LA(1);
+					if ( (LA53_0==AVOIR) ) {
+						alt53=1;
 					}
-					switch (alt51) {
+					switch (alt53) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:242:18: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:258:18: AVOIR
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete984); 
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1020); 
 							}
 							break;
 
 					}
 
-					match(input,MOT,FOLLOW_MOT_in_requete987); 
-					pushFollow(FOLLOW_paramsMot_in_requete991);
+					match(input,MOT,FOLLOW_MOT_in_requete1023); 
+					pushFollow(FOLLOW_paramsMot_in_requete1027);
 					ps=paramsMot();
 					state._fsp--;
 
@@ -1483,29 +1555,29 @@ public class lo17SqlGrammarParser extends Parser {
 						
 					}
 					break;
-				case 13 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:250:4: COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot
+				case 15 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:266:4: COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot
 					{
-					match(input,COUNT,FOLLOW_COUNT_in_requete1002); 
-					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1004); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:250:19: ( AVOIR )?
-					int alt52=2;
-					int LA52_0 = input.LA(1);
-					if ( (LA52_0==AVOIR) ) {
-						alt52=1;
+					match(input,COUNT,FOLLOW_COUNT_in_requete1038); 
+					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1040); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:266:19: ( AVOIR )?
+					int alt54=2;
+					int LA54_0 = input.LA(1);
+					if ( (LA54_0==AVOIR) ) {
+						alt54=1;
 					}
-					switch (alt52) {
+					switch (alt54) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:250:19: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:266:19: AVOIR
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete1006); 
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1042); 
 							}
 							break;
 
 					}
 
-					match(input,MOT,FOLLOW_MOT_in_requete1009); 
-					pushFollow(FOLLOW_paramsMot_in_requete1013);
+					match(input,MOT,FOLLOW_MOT_in_requete1045); 
+					pushFollow(FOLLOW_paramsMot_in_requete1049);
 					ps=paramsMot();
 					state._fsp--;
 
@@ -1518,28 +1590,28 @@ public class lo17SqlGrammarParser extends Parser {
 						
 					}
 					break;
-				case 14 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:258:4: ARTICLE ( AVOIR )? TITRE ps= paramsMot
+				case 16 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:274:4: ARTICLE ( AVOIR )? TITRE ps= paramsMot
 					{
-					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1022); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:258:12: ( AVOIR )?
-					int alt53=2;
-					int LA53_0 = input.LA(1);
-					if ( (LA53_0==AVOIR) ) {
-						alt53=1;
+					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1058); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:274:12: ( AVOIR )?
+					int alt55=2;
+					int LA55_0 = input.LA(1);
+					if ( (LA55_0==AVOIR) ) {
+						alt55=1;
 					}
-					switch (alt53) {
+					switch (alt55) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:258:12: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:274:12: AVOIR
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete1024); 
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1060); 
 							}
 							break;
 
 					}
 
-					match(input,TITRE,FOLLOW_TITRE_in_requete1027); 
-					pushFollow(FOLLOW_paramsMot_in_requete1031);
+					match(input,TITRE,FOLLOW_TITRE_in_requete1063); 
+					pushFollow(FOLLOW_paramsMot_in_requete1067);
 					ps=paramsMot();
 					state._fsp--;
 
@@ -1553,135 +1625,65 @@ public class lo17SqlGrammarParser extends Parser {
 						
 					}
 					break;
-				case 15 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:267:4: ( EVERY )? ARTICLE
-					{
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:267:4: ( EVERY )?
-					int alt54=2;
-					int LA54_0 = input.LA(1);
-					if ( (LA54_0==EVERY) ) {
-						alt54=1;
-					}
-					switch (alt54) {
-						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:267:4: EVERY
-							{
-							match(input,EVERY,FOLLOW_EVERY_in_requete1040); 
-							}
-							break;
-
-					}
-
-					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1043); 
-
-							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
-							req_arbre.ajouteFils(new Arbre("","fichier"));
-							req_arbre.ajouteFils(new Arbre("","FROM numero"));
-						
-					}
-					break;
-				case 16 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:273:4: ( EVERY )? BULLETIN
-					{
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:273:4: ( EVERY )?
-					int alt55=2;
-					int LA55_0 = input.LA(1);
-					if ( (LA55_0==EVERY) ) {
-						alt55=1;
-					}
-					switch (alt55) {
-						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:273:4: EVERY
-							{
-							match(input,EVERY,FOLLOW_EVERY_in_requete1052); 
-							}
-							break;
-
-					}
-
-					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1055); 
-
-							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
-							req_arbre.ajouteFils(new Arbre("","numero"));
-							req_arbre.ajouteFils(new Arbre("","FROM numero"));
-						
-					}
-					break;
 				case 17 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:279:4: ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:283:4: ( EVERY )? ARTICLE
 					{
-					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1064); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:279:12: ( AVOIR )?
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:283:4: ( EVERY )?
 					int alt56=2;
 					int LA56_0 = input.LA(1);
-					if ( (LA56_0==AVOIR) ) {
+					if ( (LA56_0==EVERY) ) {
 						alt56=1;
 					}
 					switch (alt56) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:279:12: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:283:4: EVERY
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete1066); 
+							match(input,EVERY,FOLLOW_EVERY_in_requete1076); 
 							}
 							break;
 
 					}
 
-					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1069); 
-					pushFollow(FOLLOW_paramsAnnee_in_requete1073);
-					ps=paramsAnnee();
-					state._fsp--;
-
+					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1079); 
 
 							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 							req_arbre.ajouteFils(new Arbre("","fichier"));
-							req_arbre.ajouteFils(new Arbre("","FROM date"));
-							req_arbre.ajouteFils(new Arbre("","WHERE"));
-							ps_arbre = ps;
-							req_arbre.ajouteFils(ps_arbre);
+							req_arbre.ajouteFils(new Arbre("","FROM numero"));
 						
 					}
 					break;
 				case 18 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:288:4: BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:289:4: ( EVERY )? BULLETIN
 					{
-					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1082); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:288:13: ( AVOIR )?
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:289:4: ( EVERY )?
 					int alt57=2;
 					int LA57_0 = input.LA(1);
-					if ( (LA57_0==AVOIR) ) {
+					if ( (LA57_0==EVERY) ) {
 						alt57=1;
 					}
 					switch (alt57) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:288:13: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:289:4: EVERY
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete1084); 
+							match(input,EVERY,FOLLOW_EVERY_in_requete1088); 
 							}
 							break;
 
 					}
 
-					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1087); 
-					pushFollow(FOLLOW_paramsAnnee_in_requete1091);
-					ps=paramsAnnee();
-					state._fsp--;
-
+					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1091); 
 
 							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 							req_arbre.ajouteFils(new Arbre("","numero"));
-							req_arbre.ajouteFils(new Arbre("","FROM date"));
-							req_arbre.ajouteFils(new Arbre("","WHERE"));
-							ps_arbre = ps;
-							req_arbre.ajouteFils(ps_arbre);
+							req_arbre.ajouteFils(new Arbre("","FROM numero"));
 						
 					}
 					break;
 				case 19 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:297:4: ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:295:4: ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee
 					{
 					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1100); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:297:12: ( AVOIR )?
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:295:12: ( AVOIR )?
 					int alt58=2;
 					int LA58_0 = input.LA(1);
 					if ( (LA58_0==AVOIR) ) {
@@ -1689,7 +1691,7 @@ public class lo17SqlGrammarParser extends Parser {
 					}
 					switch (alt58) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:297:12: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:295:12: AVOIR
 							{
 							match(input,AVOIR,FOLLOW_AVOIR_in_requete1102); 
 							}
@@ -1698,13 +1700,83 @@ public class lo17SqlGrammarParser extends Parser {
 					}
 
 					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1105); 
-					match(input,ENTRE,FOLLOW_ENTRE_in_requete1107); 
-					pushFollow(FOLLOW_paramAnneeBetween_in_requete1111);
+					pushFollow(FOLLOW_paramsAnnee_in_requete1109);
+					ps=paramsAnnee();
+					state._fsp--;
+
+
+							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+							req_arbre.ajouteFils(new Arbre("","fichier"));
+							req_arbre.ajouteFils(new Arbre("","FROM date"));
+							req_arbre.ajouteFils(new Arbre("","WHERE"));
+							ps_arbre = ps;
+							req_arbre.ajouteFils(ps_arbre);
+						
+					}
+					break;
+				case 20 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:304:4: BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee
+					{
+					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1118); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:304:13: ( AVOIR )?
+					int alt59=2;
+					int LA59_0 = input.LA(1);
+					if ( (LA59_0==AVOIR) ) {
+						alt59=1;
+					}
+					switch (alt59) {
+						case 1 :
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:304:13: AVOIR
+							{
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1120); 
+							}
+							break;
+
+					}
+
+					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1123); 
+					pushFollow(FOLLOW_paramsAnnee_in_requete1127);
+					ps=paramsAnnee();
+					state._fsp--;
+
+
+							req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
+							req_arbre.ajouteFils(new Arbre("","numero"));
+							req_arbre.ajouteFils(new Arbre("","FROM date"));
+							req_arbre.ajouteFils(new Arbre("","WHERE"));
+							ps_arbre = ps;
+							req_arbre.ajouteFils(ps_arbre);
+						
+					}
+					break;
+				case 21 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:313:4: ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween
+					{
+					match(input,ARTICLE,FOLLOW_ARTICLE_in_requete1136); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:313:12: ( AVOIR )?
+					int alt60=2;
+					int LA60_0 = input.LA(1);
+					if ( (LA60_0==AVOIR) ) {
+						alt60=1;
+					}
+					switch (alt60) {
+						case 1 :
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:313:12: AVOIR
+							{
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1138); 
+							}
+							break;
+
+					}
+
+					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1141); 
+					match(input,ENTRE,FOLLOW_ENTRE_in_requete1143); 
+					pushFollow(FOLLOW_paramAnneeBetween_in_requete1147);
 					annee1=paramAnneeBetween();
 					state._fsp--;
 
-					match(input,CONJET,FOLLOW_CONJET_in_requete1113); 
-					pushFollow(FOLLOW_paramAnneeBetween_in_requete1117);
+					match(input,CONJET,FOLLOW_CONJET_in_requete1149); 
+					pushFollow(FOLLOW_paramAnneeBetween_in_requete1153);
 					annee2=paramAnneeBetween();
 					state._fsp--;
 
@@ -1721,34 +1793,34 @@ public class lo17SqlGrammarParser extends Parser {
 						
 					}
 					break;
-				case 20 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:309:4: BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween
+				case 22 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:325:4: BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween
 					{
-					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1125); 
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:309:13: ( AVOIR )?
-					int alt59=2;
-					int LA59_0 = input.LA(1);
-					if ( (LA59_0==AVOIR) ) {
-						alt59=1;
+					match(input,BULLETIN,FOLLOW_BULLETIN_in_requete1161); 
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:325:13: ( AVOIR )?
+					int alt61=2;
+					int LA61_0 = input.LA(1);
+					if ( (LA61_0==AVOIR) ) {
+						alt61=1;
 					}
-					switch (alt59) {
+					switch (alt61) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:309:13: AVOIR
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:325:13: AVOIR
 							{
-							match(input,AVOIR,FOLLOW_AVOIR_in_requete1127); 
+							match(input,AVOIR,FOLLOW_AVOIR_in_requete1163); 
 							}
 							break;
 
 					}
 
-					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1130); 
-					match(input,ENTRE,FOLLOW_ENTRE_in_requete1132); 
-					pushFollow(FOLLOW_paramAnneeBetween_in_requete1136);
+					match(input,AUTEUR,FOLLOW_AUTEUR_in_requete1166); 
+					match(input,ENTRE,FOLLOW_ENTRE_in_requete1168); 
+					pushFollow(FOLLOW_paramAnneeBetween_in_requete1172);
 					annee1=paramAnneeBetween();
 					state._fsp--;
 
-					match(input,CONJET,FOLLOW_CONJET_in_requete1138); 
-					pushFollow(FOLLOW_paramAnneeBetween_in_requete1142);
+					match(input,CONJET,FOLLOW_CONJET_in_requete1174); 
+					pushFollow(FOLLOW_paramAnneeBetween_in_requete1178);
 					annee2=paramAnneeBetween();
 					state._fsp--;
 
@@ -1785,7 +1857,7 @@ public class lo17SqlGrammarParser extends Parser {
 
 
 	// $ANTLR start "paramsMot"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:323:1: paramsMot returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramMot ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )* ;
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:339:1: paramsMot returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramMot ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )* ;
 	public final Arbre paramsMot() throws RecognitionException {
 		Arbre les_pars_arbre =  new Arbre("");
 
@@ -1795,10 +1867,10 @@ public class lo17SqlGrammarParser extends Parser {
 
 		Arbre par1_arbre, par2_arbre;
 		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:324:40: (par1= paramMot ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )* )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:325:3: par1= paramMot ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )*
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:340:40: (par1= paramMot ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )* )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:341:3: par1= paramMot ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )*
 			{
-			pushFollow(FOLLOW_paramMot_in_paramsMot1172);
+			pushFollow(FOLLOW_paramMot_in_paramsMot1208);
 			par1=paramMot();
 			state._fsp--;
 
@@ -1806,37 +1878,37 @@ public class lo17SqlGrammarParser extends Parser {
 							par1_arbre = par1;
 							les_pars_arbre.ajouteFils(par1_arbre);
 						
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:330:3: ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )*
-			loop62:
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:346:3: ( CONJOU par2= paramMot | ( CONJET )? par2= paramMot )*
+			loop64:
 			while (true) {
-				int alt62=3;
+				int alt64=3;
 				switch ( input.LA(1) ) {
 				case CONJET:
 					{
-					int LA62_1 = input.LA(2);
-					if ( (LA62_1==VAR) ) {
-						alt62=2;
+					int LA64_1 = input.LA(2);
+					if ( (LA64_1==VAR) ) {
+						alt64=2;
 					}
 
 					}
 					break;
 				case CONJOU:
 					{
-					alt62=1;
+					alt64=1;
 					}
 					break;
 				case VAR:
 					{
-					alt62=2;
+					alt64=2;
 					}
 					break;
 				}
-				switch (alt62) {
+				switch (alt64) {
 				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:330:4: CONJOU par2= paramMot
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:346:4: CONJOU par2= paramMot
 					{
-					match(input,CONJOU,FOLLOW_CONJOU_in_paramsMot1183); 
-					pushFollow(FOLLOW_paramMot_in_paramsMot1189);
+					match(input,CONJOU,FOLLOW_CONJOU_in_paramsMot1219); 
+					pushFollow(FOLLOW_paramMot_in_paramsMot1225);
 					par2=paramMot();
 					state._fsp--;
 
@@ -1848,264 +1920,26 @@ public class lo17SqlGrammarParser extends Parser {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:336:5: ( CONJET )? par2= paramMot
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:352:5: ( CONJET )? par2= paramMot
 					{
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:336:5: ( CONJET )?
-					int alt61=2;
-					int LA61_0 = input.LA(1);
-					if ( (LA61_0==CONJET) ) {
-						alt61=1;
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:352:5: ( CONJET )?
+					int alt63=2;
+					int LA63_0 = input.LA(1);
+					if ( (LA63_0==CONJET) ) {
+						alt63=1;
 					}
-					switch (alt61) {
+					switch (alt63) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:336:5: CONJET
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:352:5: CONJET
 							{
-							match(input,CONJET,FOLLOW_CONJET_in_paramsMot1200); 
+							match(input,CONJET,FOLLOW_CONJET_in_paramsMot1236); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_paramMot_in_paramsMot1207);
+					pushFollow(FOLLOW_paramMot_in_paramsMot1243);
 					par2=paramMot();
-					state._fsp--;
-
-
-									par2_arbre = par2;
-									les_pars_arbre.ajouteFils(new Arbre("", "AND"));
-									les_pars_arbre.ajouteFils(par2_arbre);
-								
-					}
-					break;
-
-				default :
-					break loop62;
-				}
-			}
-
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		return les_pars_arbre;
-	}
-	// $ANTLR end "paramsMot"
-
-
-
-	// $ANTLR start "paramMot"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:345:1: paramMot returns [Arbre lepar_arbre = new Arbre(\"\")] : a= VAR ;
-	public final Arbre paramMot() throws RecognitionException {
-		Arbre lepar_arbre =  new Arbre("");
-
-
-		Token a=null;
-
-		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:345:54: (a= VAR )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:346:2: a= VAR
-			{
-			a=(Token)match(input,VAR,FOLLOW_VAR_in_paramMot1235); 
-			 lepar_arbre.ajouteFils(new Arbre("mot =", "'"+a.getText()+"'"));
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		return lepar_arbre;
-	}
-	// $ANTLR end "paramMot"
-
-
-
-	// $ANTLR start "paramsAnnee"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:351:1: paramsAnnee returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramAnnee ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )* ;
-	public final Arbre paramsAnnee() throws RecognitionException {
-		Arbre les_pars_arbre =  new Arbre("");
-
-
-		Arbre par1 =null;
-		Arbre par2 =null;
-
-		Arbre par1_arbre, par2_arbre;
-		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:352:40: (par1= paramAnnee ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )* )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:353:3: par1= paramAnnee ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )*
-			{
-			pushFollow(FOLLOW_paramAnnee_in_paramsAnnee1266);
-			par1=paramAnnee();
-			state._fsp--;
-
-
-							par1_arbre = par1;
-							les_pars_arbre.ajouteFils(par1_arbre);
-						
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:358:3: ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )*
-			loop63:
-			while (true) {
-				int alt63=3;
-				int LA63_0 = input.LA(1);
-				if ( (LA63_0==CONJET) ) {
-					int LA63_2 = input.LA(2);
-					if ( (LA63_2==ANNEE) ) {
-						alt63=2;
-					}
-
-				}
-				else if ( (LA63_0==CONJOU) ) {
-					alt63=1;
-				}
-
-				switch (alt63) {
-				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:358:4: CONJOU par2= paramAnnee
-					{
-					match(input,CONJOU,FOLLOW_CONJOU_in_paramsAnnee1277); 
-					pushFollow(FOLLOW_paramAnnee_in_paramsAnnee1283);
-					par2=paramAnnee();
-					state._fsp--;
-
-
-									par2_arbre = par2;
-									les_pars_arbre.ajouteFils(new Arbre("", "OR"));
-									les_pars_arbre.ajouteFils(par2_arbre);
-								
-					}
-					break;
-				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:364:5: CONJET par2= paramAnnee
-					{
-					match(input,CONJET,FOLLOW_CONJET_in_paramsAnnee1294); 
-					pushFollow(FOLLOW_paramAnnee_in_paramsAnnee1300);
-					par2=paramAnnee();
-					state._fsp--;
-
-
-									par2_arbre = par2;
-									les_pars_arbre.ajouteFils(new Arbre("", "AND"));
-									les_pars_arbre.ajouteFils(par2_arbre);
-								
-					}
-					break;
-
-				default :
-					break loop63;
-				}
-			}
-
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		return les_pars_arbre;
-	}
-	// $ANTLR end "paramsAnnee"
-
-
-
-	// $ANTLR start "paramAnnee"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:373:1: paramAnnee returns [Arbre lepar_arbre = new Arbre(\"\")] : a= ANNEE ;
-	public final Arbre paramAnnee() throws RecognitionException {
-		Arbre lepar_arbre =  new Arbre("");
-
-
-		Token a=null;
-
-		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:373:56: (a= ANNEE )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:374:2: a= ANNEE
-			{
-			a=(Token)match(input,ANNEE,FOLLOW_ANNEE_in_paramAnnee1328); 
-			 lepar_arbre.ajouteFils(new Arbre("annee =", "'"+a.getText()+"'"));
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		return lepar_arbre;
-	}
-	// $ANTLR end "paramAnnee"
-
-
-
-	// $ANTLR start "paramsAnneeJointure"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:378:1: paramsAnneeJointure returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramAnneeJointure ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )* ;
-	public final Arbre paramsAnneeJointure() throws RecognitionException {
-		Arbre les_pars_arbre =  new Arbre("");
-
-
-		Arbre par1 =null;
-		Arbre par2 =null;
-
-		Arbre par1_arbre, par2_arbre;
-		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:379:40: (par1= paramAnneeJointure ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )* )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:380:3: par1= paramAnneeJointure ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )*
-			{
-			pushFollow(FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1358);
-			par1=paramAnneeJointure();
-			state._fsp--;
-
-
-							par1_arbre = par1;
-							les_pars_arbre.ajouteFils(par1_arbre);
-						
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:385:3: ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )*
-			loop64:
-			while (true) {
-				int alt64=3;
-				int LA64_0 = input.LA(1);
-				if ( (LA64_0==CONJOU) ) {
-					alt64=1;
-				}
-				else if ( (LA64_0==CONJET) ) {
-					alt64=2;
-				}
-
-				switch (alt64) {
-				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:385:4: CONJOU par2= paramAnneeJointure
-					{
-					match(input,CONJOU,FOLLOW_CONJOU_in_paramsAnneeJointure1369); 
-					pushFollow(FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1375);
-					par2=paramAnneeJointure();
-					state._fsp--;
-
-
-									par2_arbre = par2;
-									les_pars_arbre.ajouteFils(new Arbre("", "OR"));
-									les_pars_arbre.ajouteFils(par2_arbre);
-								
-					}
-					break;
-				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:391:5: CONJET par2= paramAnneeJointure
-					{
-					match(input,CONJET,FOLLOW_CONJET_in_paramsAnneeJointure1386); 
-					pushFollow(FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1392);
-					par2=paramAnneeJointure();
 					state._fsp--;
 
 
@@ -2133,12 +1967,382 @@ public class lo17SqlGrammarParser extends Parser {
 		}
 		return les_pars_arbre;
 	}
+	// $ANTLR end "paramsMot"
+
+
+
+	// $ANTLR start "paramMot"
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:361:1: paramMot returns [Arbre lepar_arbre = new Arbre(\"\")] : a= VAR ;
+	public final Arbre paramMot() throws RecognitionException {
+		Arbre lepar_arbre =  new Arbre("");
+
+
+		Token a=null;
+
+		try {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:361:54: (a= VAR )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:362:2: a= VAR
+			{
+			a=(Token)match(input,VAR,FOLLOW_VAR_in_paramMot1271); 
+			 lepar_arbre.ajouteFils(new Arbre("mot =", "'"+a.getText()+"'"));
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return lepar_arbre;
+	}
+	// $ANTLR end "paramMot"
+
+
+
+	// $ANTLR start "paramsRubrique"
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:366:1: paramsRubrique returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramRubrique ( CONJOU par2= paramRubrique | ( CONJET )? par2= paramRubrique )* ;
+	public final Arbre paramsRubrique() throws RecognitionException {
+		Arbre les_pars_arbre =  new Arbre("");
+
+
+		Arbre par1 =null;
+		Arbre par2 =null;
+
+		Arbre par1_arbre, par2_arbre;
+		try {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:367:40: (par1= paramRubrique ( CONJOU par2= paramRubrique | ( CONJET )? par2= paramRubrique )* )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:368:3: par1= paramRubrique ( CONJOU par2= paramRubrique | ( CONJET )? par2= paramRubrique )*
+			{
+			pushFollow(FOLLOW_paramRubrique_in_paramsRubrique1301);
+			par1=paramRubrique();
+			state._fsp--;
+
+
+							par1_arbre = par1;
+							les_pars_arbre.ajouteFils(par1_arbre);
+						
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:373:3: ( CONJOU par2= paramRubrique | ( CONJET )? par2= paramRubrique )*
+			loop66:
+			while (true) {
+				int alt66=3;
+				int LA66_0 = input.LA(1);
+				if ( (LA66_0==CONJOU) ) {
+					alt66=1;
+				}
+				else if ( (LA66_0==CONJET||LA66_0==VAR) ) {
+					alt66=2;
+				}
+
+				switch (alt66) {
+				case 1 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:373:4: CONJOU par2= paramRubrique
+					{
+					match(input,CONJOU,FOLLOW_CONJOU_in_paramsRubrique1312); 
+					pushFollow(FOLLOW_paramRubrique_in_paramsRubrique1318);
+					par2=paramRubrique();
+					state._fsp--;
+
+
+									par2_arbre = par2;
+									les_pars_arbre.ajouteFils(new Arbre("", "OR"));
+									les_pars_arbre.ajouteFils(par2_arbre);
+								
+					}
+					break;
+				case 2 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:379:5: ( CONJET )? par2= paramRubrique
+					{
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:379:5: ( CONJET )?
+					int alt65=2;
+					int LA65_0 = input.LA(1);
+					if ( (LA65_0==CONJET) ) {
+						alt65=1;
+					}
+					switch (alt65) {
+						case 1 :
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:379:5: CONJET
+							{
+							match(input,CONJET,FOLLOW_CONJET_in_paramsRubrique1329); 
+							}
+							break;
+
+					}
+
+					pushFollow(FOLLOW_paramRubrique_in_paramsRubrique1336);
+					par2=paramRubrique();
+					state._fsp--;
+
+
+									par2_arbre = par2;
+									les_pars_arbre.ajouteFils(new Arbre("", "AND"));
+									les_pars_arbre.ajouteFils(par2_arbre);
+								
+					}
+					break;
+
+				default :
+					break loop66;
+				}
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return les_pars_arbre;
+	}
+	// $ANTLR end "paramsRubrique"
+
+
+
+	// $ANTLR start "paramRubrique"
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:388:1: paramRubrique returns [Arbre lepar_arbre = new Arbre(\"\")] : a= VAR ;
+	public final Arbre paramRubrique() throws RecognitionException {
+		Arbre lepar_arbre =  new Arbre("");
+
+
+		Token a=null;
+
+		try {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:388:59: (a= VAR )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:389:2: a= VAR
+			{
+			a=(Token)match(input,VAR,FOLLOW_VAR_in_paramRubrique1364); 
+			 lepar_arbre.ajouteFils(new Arbre("LOWER(rubrique) LIKE", "'%"+a.getText()+"%'"));
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return lepar_arbre;
+	}
+	// $ANTLR end "paramRubrique"
+
+
+
+	// $ANTLR start "paramsAnnee"
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:394:1: paramsAnnee returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramAnnee ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )* ;
+	public final Arbre paramsAnnee() throws RecognitionException {
+		Arbre les_pars_arbre =  new Arbre("");
+
+
+		Arbre par1 =null;
+		Arbre par2 =null;
+
+		Arbre par1_arbre, par2_arbre;
+		try {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:395:40: (par1= paramAnnee ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )* )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:396:3: par1= paramAnnee ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )*
+			{
+			pushFollow(FOLLOW_paramAnnee_in_paramsAnnee1395);
+			par1=paramAnnee();
+			state._fsp--;
+
+
+							par1_arbre = par1;
+							les_pars_arbre.ajouteFils(par1_arbre);
+						
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:401:3: ( CONJOU par2= paramAnnee | CONJET par2= paramAnnee )*
+			loop67:
+			while (true) {
+				int alt67=3;
+				int LA67_0 = input.LA(1);
+				if ( (LA67_0==CONJET) ) {
+					int LA67_2 = input.LA(2);
+					if ( (LA67_2==ANNEE) ) {
+						alt67=2;
+					}
+
+				}
+				else if ( (LA67_0==CONJOU) ) {
+					alt67=1;
+				}
+
+				switch (alt67) {
+				case 1 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:401:4: CONJOU par2= paramAnnee
+					{
+					match(input,CONJOU,FOLLOW_CONJOU_in_paramsAnnee1406); 
+					pushFollow(FOLLOW_paramAnnee_in_paramsAnnee1412);
+					par2=paramAnnee();
+					state._fsp--;
+
+
+									par2_arbre = par2;
+									les_pars_arbre.ajouteFils(new Arbre("", "OR"));
+									les_pars_arbre.ajouteFils(par2_arbre);
+								
+					}
+					break;
+				case 2 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:407:5: CONJET par2= paramAnnee
+					{
+					match(input,CONJET,FOLLOW_CONJET_in_paramsAnnee1423); 
+					pushFollow(FOLLOW_paramAnnee_in_paramsAnnee1429);
+					par2=paramAnnee();
+					state._fsp--;
+
+
+									par2_arbre = par2;
+									les_pars_arbre.ajouteFils(new Arbre("", "AND"));
+									les_pars_arbre.ajouteFils(par2_arbre);
+								
+					}
+					break;
+
+				default :
+					break loop67;
+				}
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return les_pars_arbre;
+	}
+	// $ANTLR end "paramsAnnee"
+
+
+
+	// $ANTLR start "paramAnnee"
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:416:1: paramAnnee returns [Arbre lepar_arbre = new Arbre(\"\")] : a= ANNEE ;
+	public final Arbre paramAnnee() throws RecognitionException {
+		Arbre lepar_arbre =  new Arbre("");
+
+
+		Token a=null;
+
+		try {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:416:56: (a= ANNEE )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:417:2: a= ANNEE
+			{
+			a=(Token)match(input,ANNEE,FOLLOW_ANNEE_in_paramAnnee1457); 
+			 lepar_arbre.ajouteFils(new Arbre("annee =", "'"+a.getText()+"'"));
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return lepar_arbre;
+	}
+	// $ANTLR end "paramAnnee"
+
+
+
+	// $ANTLR start "paramsAnneeJointure"
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:421:1: paramsAnneeJointure returns [Arbre les_pars_arbre = new Arbre(\"\")] : par1= paramAnneeJointure ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )* ;
+	public final Arbre paramsAnneeJointure() throws RecognitionException {
+		Arbre les_pars_arbre =  new Arbre("");
+
+
+		Arbre par1 =null;
+		Arbre par2 =null;
+
+		Arbre par1_arbre, par2_arbre;
+		try {
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:422:40: (par1= paramAnneeJointure ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )* )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:423:3: par1= paramAnneeJointure ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )*
+			{
+			pushFollow(FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1487);
+			par1=paramAnneeJointure();
+			state._fsp--;
+
+
+							par1_arbre = par1;
+							les_pars_arbre.ajouteFils(par1_arbre);
+						
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:428:3: ( CONJOU par2= paramAnneeJointure | CONJET par2= paramAnneeJointure )*
+			loop68:
+			while (true) {
+				int alt68=3;
+				int LA68_0 = input.LA(1);
+				if ( (LA68_0==CONJOU) ) {
+					alt68=1;
+				}
+				else if ( (LA68_0==CONJET) ) {
+					alt68=2;
+				}
+
+				switch (alt68) {
+				case 1 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:428:4: CONJOU par2= paramAnneeJointure
+					{
+					match(input,CONJOU,FOLLOW_CONJOU_in_paramsAnneeJointure1498); 
+					pushFollow(FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1504);
+					par2=paramAnneeJointure();
+					state._fsp--;
+
+
+									par2_arbre = par2;
+									les_pars_arbre.ajouteFils(new Arbre("", "OR"));
+									les_pars_arbre.ajouteFils(par2_arbre);
+								
+					}
+					break;
+				case 2 :
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:434:5: CONJET par2= paramAnneeJointure
+					{
+					match(input,CONJET,FOLLOW_CONJET_in_paramsAnneeJointure1515); 
+					pushFollow(FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1521);
+					par2=paramAnneeJointure();
+					state._fsp--;
+
+
+									par2_arbre = par2;
+									les_pars_arbre.ajouteFils(new Arbre("", "AND"));
+									les_pars_arbre.ajouteFils(par2_arbre);
+								
+					}
+					break;
+
+				default :
+					break loop68;
+				}
+			}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		return les_pars_arbre;
+	}
 	// $ANTLR end "paramsAnneeJointure"
 
 
 
 	// $ANTLR start "paramAnneeJointure"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:400:1: paramAnneeJointure returns [Arbre lepar_arbre = new Arbre(\"\")] : a= ANNEE ;
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:443:1: paramAnneeJointure returns [Arbre lepar_arbre = new Arbre(\"\")] : a= ANNEE ;
 	public final Arbre paramAnneeJointure() throws RecognitionException {
 		Arbre lepar_arbre =  new Arbre("");
 
@@ -2146,10 +2350,10 @@ public class lo17SqlGrammarParser extends Parser {
 		Token a=null;
 
 		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:400:64: (a= ANNEE )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:401:2: a= ANNEE
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:443:64: (a= ANNEE )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:444:2: a= ANNEE
 			{
-			a=(Token)match(input,ANNEE,FOLLOW_ANNEE_in_paramAnneeJointure1420); 
+			a=(Token)match(input,ANNEE,FOLLOW_ANNEE_in_paramAnneeJointure1549); 
 			 lepar_arbre.ajouteFils(new Arbre("date.annee =", "'"+a.getText()+"'"));
 			}
 
@@ -2168,7 +2372,7 @@ public class lo17SqlGrammarParser extends Parser {
 
 
 	// $ANTLR start "paramAnneeBetween"
-	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:405:1: paramAnneeBetween returns [Arbre lepar_arbre = new Arbre(\"\")] : a= ANNEE ;
+	// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:448:1: paramAnneeBetween returns [Arbre lepar_arbre = new Arbre(\"\")] : a= ANNEE ;
 	public final Arbre paramAnneeBetween() throws RecognitionException {
 		Arbre lepar_arbre =  new Arbre("");
 
@@ -2176,10 +2380,10 @@ public class lo17SqlGrammarParser extends Parser {
 		Token a=null;
 
 		try {
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:405:63: (a= ANNEE )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:406:2: a= ANNEE
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:448:63: (a= ANNEE )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:449:2: a= ANNEE
 			{
-			a=(Token)match(input,ANNEE,FOLLOW_ANNEE_in_paramAnneeBetween1442); 
+			a=(Token)match(input,ANNEE,FOLLOW_ANNEE_in_paramAnneeBetween1571); 
 			 lepar_arbre.ajouteFils(new Arbre("'"+a.getText()+"'"));
 			}
 
@@ -2198,150 +2402,153 @@ public class lo17SqlGrammarParser extends Parser {
 	// Delegated rules
 
 
-	protected DFA60 dfa60 = new DFA60(this);
-	static final String DFA60_eotS =
-		"\124\uffff";
-	static final String DFA60_eofS =
-		"\1\uffff\1\12\1\uffff\1\17\16\uffff\1\37\1\uffff\1\46\1\54\2\uffff\1\70"+
-		"\1\76\2\uffff\1\37\14\uffff\1\54\21\uffff\1\76\3\uffff\1\37\2\uffff\2"+
-		"\46\1\54\4\uffff\2\70\1\76\1\uffff\1\120\1\123\5\uffff";
-	static final String DFA60_minS =
-		"\1\5\1\6\1\uffff\1\6\2\5\1\6\1\24\1\4\1\24\1\uffff\1\6\1\24\1\4\1\24\3"+
+	protected DFA62 dfa62 = new DFA62(this);
+	static final String DFA62_eotS =
+		"\126\uffff";
+	static final String DFA62_eofS =
+		"\1\uffff\1\13\1\uffff\1\21\20\uffff\1\41\1\uffff\1\50\1\56\2\uffff\1\72"+
+		"\1\100\2\uffff\1\41\14\uffff\1\56\21\uffff\1\100\3\uffff\1\41\2\uffff"+
+		"\2\50\1\56\4\uffff\2\72\1\100\1\uffff\1\122\1\125\5\uffff";
+	static final String DFA62_minS =
+		"\1\5\1\6\1\uffff\1\6\2\5\1\6\1\24\1\4\1\24\2\uffff\1\6\1\24\1\4\1\24\4"+
 		"\uffff\1\6\1\4\1\7\2\6\1\4\1\7\1\6\1\24\3\6\1\4\1\uffff\1\11\2\4\1\17"+
 		"\3\uffff\1\24\3\6\1\4\1\uffff\1\24\3\6\1\4\1\11\2\4\1\17\3\uffff\1\24"+
 		"\3\6\1\4\1\uffff\1\6\1\uffff\1\4\2\7\1\6\1\uffff\1\6\1\uffff\1\4\2\7\1"+
 		"\6\1\uffff\2\7\1\17\1\uffff\1\7\1\17\1\uffff";
-	static final String DFA60_maxS =
-		"\1\20\1\23\1\uffff\1\23\2\10\1\23\1\24\1\15\1\24\1\uffff\1\23\1\24\1\15"+
-		"\1\24\3\uffff\1\24\1\4\1\23\2\24\1\4\1\23\4\24\1\6\1\15\1\uffff\1\11\1"+
+	static final String DFA62_maxS =
+		"\1\20\1\23\1\uffff\1\23\2\10\1\23\1\24\1\15\1\24\2\uffff\1\23\1\24\1\15"+
+		"\1\24\4\uffff\1\24\1\4\1\23\2\24\1\4\1\23\4\24\1\6\1\15\1\uffff\1\11\1"+
 		"\4\2\23\3\uffff\3\24\1\6\1\15\1\uffff\3\24\1\6\1\15\1\11\1\4\2\23\3\uffff"+
 		"\3\24\1\6\1\15\1\uffff\1\24\1\uffff\1\4\2\23\1\24\1\uffff\1\24\1\uffff"+
 		"\1\4\2\23\1\24\1\uffff\3\23\1\uffff\2\23\1\uffff";
-	static final String DFA60_acceptS =
-		"\2\uffff\1\2\7\uffff\1\17\4\uffff\1\20\1\14\1\15\15\uffff\1\16\4\uffff"+
-		"\1\1\1\6\1\21\5\uffff\1\12\11\uffff\1\3\1\7\1\22\5\uffff\1\13\1\uffff"+
-		"\1\4\4\uffff\1\10\1\uffff\1\5\4\uffff\1\11\3\uffff\1\23\2\uffff\1\24";
-	static final String DFA60_specialS =
-		"\124\uffff}>";
-	static final String[] DFA60_transitionS = {
+	static final String DFA62_acceptS =
+		"\2\uffff\1\2\7\uffff\1\13\1\21\4\uffff\1\14\1\22\1\16\1\17\15\uffff\1"+
+		"\20\4\uffff\1\1\1\6\1\23\5\uffff\1\12\11\uffff\1\3\1\7\1\24\5\uffff\1"+
+		"\15\1\uffff\1\4\4\uffff\1\10\1\uffff\1\5\4\uffff\1\11\3\uffff\1\25\2\uffff"+
+		"\1\26";
+	static final String DFA62_specialS =
+		"\126\uffff}>";
+	static final String[] DFA62_transitionS = {
 			"\1\1\2\uffff\1\3\2\uffff\1\4\2\uffff\1\5\1\uffff\1\2",
-			"\1\10\1\6\7\uffff\1\11\3\uffff\1\7",
+			"\1\10\1\6\7\uffff\1\11\1\12\2\uffff\1\7",
 			"",
-			"\1\15\1\13\7\uffff\1\16\3\uffff\1\14",
-			"\1\20\2\uffff\1\21",
-			"\1\12\2\uffff\1\17",
-			"\1\10\10\uffff\1\11\3\uffff\1\7",
-			"\1\22",
-			"\1\24\10\uffff\1\23",
-			"\1\25",
-			"",
-			"\1\15\10\uffff\1\16\3\uffff\1\14",
-			"\1\26",
-			"\1\30\10\uffff\1\27",
-			"\1\31",
+			"\1\16\1\14\7\uffff\1\17\1\20\2\uffff\1\15",
+			"\1\22\2\uffff\1\23",
+			"\1\13\2\uffff\1\21",
+			"\1\10\10\uffff\1\11\1\12\2\uffff\1\7",
+			"\1\24",
+			"\1\26\10\uffff\1\25",
+			"\1\27",
 			"",
 			"",
+			"\1\16\10\uffff\1\17\1\20\2\uffff\1\15",
+			"\1\30",
+			"\1\32\10\uffff\1\31",
+			"\1\33",
 			"",
-			"\1\36\1\35\1\uffff\1\33\1\32\11\uffff\1\34",
-			"\1\40",
-			"\1\43\1\uffff\1\42\1\41\4\uffff\1\45\3\uffff\1\44",
-			"\1\53\1\52\1\uffff\1\50\1\47\11\uffff\1\51",
-			"\1\61\1\60\1\uffff\1\56\1\55\11\uffff\1\57",
-			"\1\62",
-			"\1\65\1\uffff\1\64\1\63\4\uffff\1\67\3\uffff\1\66",
-			"\1\75\1\74\1\uffff\1\72\1\71\11\uffff\1\73",
-			"\1\77",
-			"\2\44\14\uffff\1\34",
-			"\1\36\1\35\1\uffff\1\33\1\32\11\uffff\1\34",
-			"\1\36",
-			"\1\44\10\uffff\1\100",
 			"",
+			"",
+			"",
+			"\1\40\1\37\1\uffff\1\35\1\34\11\uffff\1\36",
+			"\1\42",
+			"\1\45\1\uffff\1\44\1\43\4\uffff\1\47\3\uffff\1\46",
+			"\1\55\1\54\1\uffff\1\52\1\51\11\uffff\1\53",
+			"\1\63\1\62\1\uffff\1\60\1\57\11\uffff\1\61",
+			"\1\64",
+			"\1\67\1\uffff\1\66\1\65\4\uffff\1\71\3\uffff\1\70",
+			"\1\77\1\76\1\uffff\1\74\1\73\11\uffff\1\75",
 			"\1\101",
-			"\1\102",
-			"\1\103\2\uffff\1\43\7\uffff\1\45\3\uffff\1\44",
-			"\1\45\3\uffff\1\44",
+			"\2\46\14\uffff\1\36",
+			"\1\40\1\37\1\uffff\1\35\1\34\11\uffff\1\36",
+			"\1\40",
+			"\1\46\10\uffff\1\102",
 			"",
-			"",
-			"",
+			"\1\103",
 			"\1\104",
-			"\1\53\1\52\14\uffff\1\51",
-			"\1\53\1\52\1\uffff\1\50\1\47\11\uffff\1\51",
-			"\1\53",
-			"\1\45\10\uffff\1\105",
+			"\1\105\2\uffff\1\45\7\uffff\1\47\3\uffff\1\46",
+			"\1\47\3\uffff\1\46",
+			"",
+			"",
 			"",
 			"\1\106",
-			"\1\61\1\60\14\uffff\1\57",
-			"\1\61\1\60\1\uffff\1\56\1\55\11\uffff\1\57",
-			"\1\61",
-			"\1\66\10\uffff\1\107",
+			"\1\55\1\54\14\uffff\1\53",
+			"\1\55\1\54\1\uffff\1\52\1\51\11\uffff\1\53",
+			"\1\55",
+			"\1\47\10\uffff\1\107",
+			"",
 			"\1\110",
-			"\1\111",
-			"\1\112\2\uffff\1\65\7\uffff\1\67\3\uffff\1\66",
-			"\1\67\3\uffff\1\66",
-			"",
-			"",
-			"",
+			"\1\63\1\62\14\uffff\1\61",
+			"\1\63\1\62\1\uffff\1\60\1\57\11\uffff\1\61",
+			"\1\63",
+			"\1\70\10\uffff\1\111",
+			"\1\112",
 			"\1\113",
-			"\1\75\1\74\14\uffff\1\73",
-			"\1\75\1\74\1\uffff\1\72\1\71\11\uffff\1\73",
-			"\1\75",
-			"\1\67\10\uffff\1\114",
+			"\1\114\2\uffff\1\67\7\uffff\1\71\3\uffff\1\70",
+			"\1\71\3\uffff\1\70",
 			"",
-			"\1\36\1\35\1\uffff\1\33\1\32\11\uffff\1\34",
+			"",
 			"",
 			"\1\115",
-			"\1\43\1\uffff\1\42\1\41\4\uffff\1\45\3\uffff\1\44",
-			"\1\43\1\uffff\1\42\1\41\4\uffff\1\45\3\uffff\1\44",
-			"\1\53\1\52\1\uffff\1\50\1\47\11\uffff\1\51",
+			"\1\77\1\76\14\uffff\1\75",
+			"\1\77\1\76\1\uffff\1\74\1\73\11\uffff\1\75",
+			"\1\77",
+			"\1\71\10\uffff\1\116",
 			"",
-			"\1\61\1\60\1\uffff\1\56\1\55\11\uffff\1\57",
+			"\1\40\1\37\1\uffff\1\35\1\34\11\uffff\1\36",
 			"",
-			"\1\116",
-			"\1\65\1\uffff\1\64\1\63\4\uffff\1\67\3\uffff\1\66",
-			"\1\65\1\uffff\1\64\1\63\4\uffff\1\67\3\uffff\1\66",
-			"\1\75\1\74\1\uffff\1\72\1\71\11\uffff\1\73",
+			"\1\117",
+			"\1\45\1\uffff\1\44\1\43\4\uffff\1\47\3\uffff\1\46",
+			"\1\45\1\uffff\1\44\1\43\4\uffff\1\47\3\uffff\1\46",
+			"\1\55\1\54\1\uffff\1\52\1\51\11\uffff\1\53",
 			"",
-			"\1\117\1\uffff\1\105\5\uffff\1\105\3\uffff\1\100",
-			"\1\122\1\uffff\1\121\5\uffff\1\114\3\uffff\1\107",
-			"\1\105\3\uffff\1\100",
+			"\1\63\1\62\1\uffff\1\60\1\57\11\uffff\1\61",
 			"",
-			"\1\122\7\uffff\1\114\3\uffff\1\107",
-			"\1\114\3\uffff\1\107",
+			"\1\120",
+			"\1\67\1\uffff\1\66\1\65\4\uffff\1\71\3\uffff\1\70",
+			"\1\67\1\uffff\1\66\1\65\4\uffff\1\71\3\uffff\1\70",
+			"\1\77\1\76\1\uffff\1\74\1\73\11\uffff\1\75",
+			"",
+			"\1\121\1\uffff\1\107\5\uffff\1\107\3\uffff\1\102",
+			"\1\124\1\uffff\1\123\5\uffff\1\116\3\uffff\1\111",
+			"\1\107\3\uffff\1\102",
+			"",
+			"\1\124\7\uffff\1\116\3\uffff\1\111",
+			"\1\116\3\uffff\1\111",
 			""
 	};
 
-	static final short[] DFA60_eot = DFA.unpackEncodedString(DFA60_eotS);
-	static final short[] DFA60_eof = DFA.unpackEncodedString(DFA60_eofS);
-	static final char[] DFA60_min = DFA.unpackEncodedStringToUnsignedChars(DFA60_minS);
-	static final char[] DFA60_max = DFA.unpackEncodedStringToUnsignedChars(DFA60_maxS);
-	static final short[] DFA60_accept = DFA.unpackEncodedString(DFA60_acceptS);
-	static final short[] DFA60_special = DFA.unpackEncodedString(DFA60_specialS);
-	static final short[][] DFA60_transition;
+	static final short[] DFA62_eot = DFA.unpackEncodedString(DFA62_eotS);
+	static final short[] DFA62_eof = DFA.unpackEncodedString(DFA62_eofS);
+	static final char[] DFA62_min = DFA.unpackEncodedStringToUnsignedChars(DFA62_minS);
+	static final char[] DFA62_max = DFA.unpackEncodedStringToUnsignedChars(DFA62_maxS);
+	static final short[] DFA62_accept = DFA.unpackEncodedString(DFA62_acceptS);
+	static final short[] DFA62_special = DFA.unpackEncodedString(DFA62_specialS);
+	static final short[][] DFA62_transition;
 
 	static {
-		int numStates = DFA60_transitionS.length;
-		DFA60_transition = new short[numStates][];
+		int numStates = DFA62_transitionS.length;
+		DFA62_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA60_transition[i] = DFA.unpackEncodedString(DFA60_transitionS[i]);
+			DFA62_transition[i] = DFA.unpackEncodedString(DFA62_transitionS[i]);
 		}
 	}
 
-	protected class DFA60 extends DFA {
+	protected class DFA62 extends DFA {
 
-		public DFA60(BaseRecognizer recognizer) {
+		public DFA62(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 60;
-			this.eot = DFA60_eot;
-			this.eof = DFA60_eof;
-			this.min = DFA60_min;
-			this.max = DFA60_max;
-			this.accept = DFA60_accept;
-			this.special = DFA60_special;
-			this.transition = DFA60_transition;
+			this.decisionNumber = 62;
+			this.eot = DFA62_eot;
+			this.eof = DFA62_eof;
+			this.min = DFA62_min;
+			this.max = DFA62_max;
+			this.accept = DFA62_accept;
+			this.special = DFA62_special;
+			this.transition = DFA62_transition;
 		}
 		@Override
 		public String getDescription() {
-			return "79:10: ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween )";
+			return "79:10: ( ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | RUBRIQUE ARTICLE ( AVOIR )? MOT ps= paramsMot | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( TITRE ps= paramsMot ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( AVOIR )? TITRE ps= paramsMot ) | BULLETIN ( AVOIR )? ( TITRE ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? TITRE ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR psAnnee= paramsAnnee | AUTEUR psAnnee= paramsAnnee ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | BULLETIN ( AVOIR )? ( MOT ps= paramsMot ( CONJET )? ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween ( CONJET )? ( AVOIR )? MOT ps= paramsMot ) | ARTICLE ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? RUBRIQUE MOT ps= paramsRubrique | BULLETIN ( AVOIR )? MOT ps= paramsMot | COUNT ARTICLE ( AVOIR )? MOT ps= paramsMot | COUNT BULLETIN ( AVOIR )? MOT ps= paramsMot | ARTICLE ( AVOIR )? TITRE ps= paramsMot | ( EVERY )? ARTICLE | ( EVERY )? BULLETIN | ARTICLE ( AVOIR )? AUTEUR ps= paramsAnnee | BULLETIN ( AVOIR )? AUTEUR ps= paramsAnnee | ARTICLE ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween | BULLETIN ( AVOIR )? AUTEUR ENTRE annee1= paramAnneeBetween CONJET annee2= paramAnneeBetween )";
 		}
 	}
 
@@ -2490,67 +2697,83 @@ public class lo17SqlGrammarParser extends Parser {
 	public static final BitSet FOLLOW_AVOIR_in_requete946 = new BitSet(new long[]{0x0000000000008000L});
 	public static final BitSet FOLLOW_MOT_in_requete949 = new BitSet(new long[]{0x0000000000100000L});
 	public static final BitSet FOLLOW_paramsMot_in_requete953 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BULLETIN_in_requete962 = new BitSet(new long[]{0x0000000000008080L});
-	public static final BitSet FOLLOW_AVOIR_in_requete964 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_ARTICLE_in_requete960 = new BitSet(new long[]{0x0000000000010080L});
+	public static final BitSet FOLLOW_AVOIR_in_requete962 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_RUBRIQUE_in_requete965 = new BitSet(new long[]{0x0000000000008000L});
 	public static final BitSet FOLLOW_MOT_in_requete967 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_paramsMot_in_requete971 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_COUNT_in_requete980 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_ARTICLE_in_requete982 = new BitSet(new long[]{0x0000000000008080L});
-	public static final BitSet FOLLOW_AVOIR_in_requete984 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_MOT_in_requete987 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_paramsMot_in_requete991 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_COUNT_in_requete1002 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_BULLETIN_in_requete1004 = new BitSet(new long[]{0x0000000000008080L});
-	public static final BitSet FOLLOW_AVOIR_in_requete1006 = new BitSet(new long[]{0x0000000000008000L});
-	public static final BitSet FOLLOW_MOT_in_requete1009 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_paramsMot_in_requete1013 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ARTICLE_in_requete1022 = new BitSet(new long[]{0x0000000000080080L});
-	public static final BitSet FOLLOW_AVOIR_in_requete1024 = new BitSet(new long[]{0x0000000000080000L});
-	public static final BitSet FOLLOW_TITRE_in_requete1027 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_paramsMot_in_requete1031 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EVERY_in_requete1040 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_ARTICLE_in_requete1043 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EVERY_in_requete1052 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_BULLETIN_in_requete1055 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ARTICLE_in_requete1064 = new BitSet(new long[]{0x00000000000000C0L});
-	public static final BitSet FOLLOW_AVOIR_in_requete1066 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_AUTEUR_in_requete1069 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramsAnnee_in_requete1073 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BULLETIN_in_requete1082 = new BitSet(new long[]{0x00000000000000C0L});
-	public static final BitSet FOLLOW_AVOIR_in_requete1084 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_AUTEUR_in_requete1087 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramsAnnee_in_requete1091 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_paramsRubrique_in_requete971 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BULLETIN_in_requete978 = new BitSet(new long[]{0x0000000000010080L});
+	public static final BitSet FOLLOW_AVOIR_in_requete980 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_RUBRIQUE_in_requete983 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_MOT_in_requete985 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramsRubrique_in_requete989 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BULLETIN_in_requete998 = new BitSet(new long[]{0x0000000000008080L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1000 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_MOT_in_requete1003 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramsMot_in_requete1007 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_COUNT_in_requete1016 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_ARTICLE_in_requete1018 = new BitSet(new long[]{0x0000000000008080L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1020 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_MOT_in_requete1023 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramsMot_in_requete1027 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_COUNT_in_requete1038 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_BULLETIN_in_requete1040 = new BitSet(new long[]{0x0000000000008080L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1042 = new BitSet(new long[]{0x0000000000008000L});
+	public static final BitSet FOLLOW_MOT_in_requete1045 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramsMot_in_requete1049 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ARTICLE_in_requete1058 = new BitSet(new long[]{0x0000000000080080L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1060 = new BitSet(new long[]{0x0000000000080000L});
+	public static final BitSet FOLLOW_TITRE_in_requete1063 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramsMot_in_requete1067 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EVERY_in_requete1076 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_ARTICLE_in_requete1079 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EVERY_in_requete1088 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_BULLETIN_in_requete1091 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_ARTICLE_in_requete1100 = new BitSet(new long[]{0x00000000000000C0L});
 	public static final BitSet FOLLOW_AVOIR_in_requete1102 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_AUTEUR_in_requete1105 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_ENTRE_in_requete1107 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1111 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_CONJET_in_requete1113 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1117 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BULLETIN_in_requete1125 = new BitSet(new long[]{0x00000000000000C0L});
-	public static final BitSet FOLLOW_AVOIR_in_requete1127 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_AUTEUR_in_requete1130 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_ENTRE_in_requete1132 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1136 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_CONJET_in_requete1138 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1142 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_paramMot_in_paramsMot1172 = new BitSet(new long[]{0x0000000000100602L});
-	public static final BitSet FOLLOW_CONJOU_in_paramsMot1183 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_paramMot_in_paramsMot1189 = new BitSet(new long[]{0x0000000000100602L});
-	public static final BitSet FOLLOW_CONJET_in_paramsMot1200 = new BitSet(new long[]{0x0000000000100000L});
-	public static final BitSet FOLLOW_paramMot_in_paramsMot1207 = new BitSet(new long[]{0x0000000000100602L});
-	public static final BitSet FOLLOW_VAR_in_paramMot1235 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_paramAnnee_in_paramsAnnee1266 = new BitSet(new long[]{0x0000000000000602L});
-	public static final BitSet FOLLOW_CONJOU_in_paramsAnnee1277 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnnee_in_paramsAnnee1283 = new BitSet(new long[]{0x0000000000000602L});
-	public static final BitSet FOLLOW_CONJET_in_paramsAnnee1294 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnnee_in_paramsAnnee1300 = new BitSet(new long[]{0x0000000000000602L});
-	public static final BitSet FOLLOW_ANNEE_in_paramAnnee1328 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1358 = new BitSet(new long[]{0x0000000000000602L});
-	public static final BitSet FOLLOW_CONJOU_in_paramsAnneeJointure1369 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1375 = new BitSet(new long[]{0x0000000000000602L});
-	public static final BitSet FOLLOW_CONJET_in_paramsAnneeJointure1386 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1392 = new BitSet(new long[]{0x0000000000000602L});
-	public static final BitSet FOLLOW_ANNEE_in_paramAnneeJointure1420 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ANNEE_in_paramAnneeBetween1442 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_AUTEUR_in_requete1105 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramsAnnee_in_requete1109 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BULLETIN_in_requete1118 = new BitSet(new long[]{0x00000000000000C0L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1120 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_AUTEUR_in_requete1123 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramsAnnee_in_requete1127 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ARTICLE_in_requete1136 = new BitSet(new long[]{0x00000000000000C0L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1138 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_AUTEUR_in_requete1141 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_ENTRE_in_requete1143 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1147 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_CONJET_in_requete1149 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1153 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BULLETIN_in_requete1161 = new BitSet(new long[]{0x00000000000000C0L});
+	public static final BitSet FOLLOW_AVOIR_in_requete1163 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_AUTEUR_in_requete1166 = new BitSet(new long[]{0x0000000000002000L});
+	public static final BitSet FOLLOW_ENTRE_in_requete1168 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1172 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_CONJET_in_requete1174 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnneeBetween_in_requete1178 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_paramMot_in_paramsMot1208 = new BitSet(new long[]{0x0000000000100602L});
+	public static final BitSet FOLLOW_CONJOU_in_paramsMot1219 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramMot_in_paramsMot1225 = new BitSet(new long[]{0x0000000000100602L});
+	public static final BitSet FOLLOW_CONJET_in_paramsMot1236 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramMot_in_paramsMot1243 = new BitSet(new long[]{0x0000000000100602L});
+	public static final BitSet FOLLOW_VAR_in_paramMot1271 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_paramRubrique_in_paramsRubrique1301 = new BitSet(new long[]{0x0000000000100602L});
+	public static final BitSet FOLLOW_CONJOU_in_paramsRubrique1312 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramRubrique_in_paramsRubrique1318 = new BitSet(new long[]{0x0000000000100602L});
+	public static final BitSet FOLLOW_CONJET_in_paramsRubrique1329 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_paramRubrique_in_paramsRubrique1336 = new BitSet(new long[]{0x0000000000100602L});
+	public static final BitSet FOLLOW_VAR_in_paramRubrique1364 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_paramAnnee_in_paramsAnnee1395 = new BitSet(new long[]{0x0000000000000602L});
+	public static final BitSet FOLLOW_CONJOU_in_paramsAnnee1406 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnnee_in_paramsAnnee1412 = new BitSet(new long[]{0x0000000000000602L});
+	public static final BitSet FOLLOW_CONJET_in_paramsAnnee1423 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnnee_in_paramsAnnee1429 = new BitSet(new long[]{0x0000000000000602L});
+	public static final BitSet FOLLOW_ANNEE_in_paramAnnee1457 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1487 = new BitSet(new long[]{0x0000000000000602L});
+	public static final BitSet FOLLOW_CONJOU_in_paramsAnneeJointure1498 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1504 = new BitSet(new long[]{0x0000000000000602L});
+	public static final BitSet FOLLOW_CONJET_in_paramsAnneeJointure1515 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_paramAnneeJointure_in_paramsAnneeJointure1521 = new BitSet(new long[]{0x0000000000000602L});
+	public static final BitSet FOLLOW_ANNEE_in_paramAnneeJointure1549 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ANNEE_in_paramAnneeBetween1571 = new BitSet(new long[]{0x0000000000000002L});
 }
