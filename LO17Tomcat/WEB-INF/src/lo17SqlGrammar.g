@@ -1,6 +1,6 @@
 grammar lo17SqlGrammar;
 
-SELECT : 'vouloir' | 'afficher' | 'trouve' | 'recuperer' | 'donner' | 'quel' | 'cherche'
+SELECT : 'vouloir' | 'afficher' | 'trouve' | 'recuperer' | 'donner' | 'quel' | 'cherche' | 'liste'
 ;
 
 EVERY : 'tous'
@@ -36,7 +36,7 @@ CONJET : 'et'
 CONJOU : 'ou'
 ;
 
-MOT : 'mot' | 'contenir' | 'parler' | 'trait'
+MOT : 'mot' | 'contenir' | 'parler' | 'trait' | 'compren' | 'sur'
 ;
 
 ENTRE : 'entre'
@@ -326,7 +326,7 @@ paramsMot returns [Arbre les_pars_arbre = new Arbre("")]
 				les_pars_arbre.ajouteFils(new Arbre("", "OR"));
 				les_pars_arbre.ajouteFils(par2_arbre);
 			}
-		| CONJET par2 = paramMot
+		| CONJET? par2 = paramMot
 			{
 				par2_arbre = $par2.lepar_arbre;
 				les_pars_arbre.ajouteFils(new Arbre("", "AND"));

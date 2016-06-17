@@ -52,12 +52,12 @@
                         1. Tous les articles</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
                         2. Je veux les articles qui parlent d'airbus</a></li>
-                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
-                        3. Je veux les articles qui parlent d'airbus</a></li>
-                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
-                        4. Je veux les articles qui parlent d'airbus</a></li>
-                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
-                        5. Je veux les articles qui parlent d'airbus</a></li>
+                    <li><a href="${pageContext.request.contextPath}servlet/LanceRequete?r=Combien+de+bulletin+parles+d'auromobile+%3F">
+                        3. Combien de bulletin parles d'auromobile ?</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=r=Les+articles+sur+l'environnement+écrites+en+2012">
+                        4. Les articles sur l'environnement écrites en 2012</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=combien+d'article+sur+l'inovation+ou+l'automovile">
+                        5. combien d'article sur l'inovation ou l'automovile</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
                         6. Je veux les articles qui parlent d'airbus</a></li>
                 </ul>
