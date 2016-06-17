@@ -76,7 +76,7 @@ requete returns [Arbre req_arbre = new Arbre("")]
 	// Je veux tous les articles sur le sujet X écrits en (telle année)
 	// ou
 	// Je veux tous les articles écrits en (telle année) sur le sujet X
-	SELECT? (ARTICLE AVOIR? (TITRE ps=paramsMot CONJET? AVOIR? AUTEUR psAnnee=paramsAnnee | AUTEUR psAnnee=paramsAnnee CONJET? AVOIR? TITRE ps=paramsMot) {
+	SELECT* (ARTICLE AVOIR? (TITRE ps=paramsMot CONJET? AVOIR? AUTEUR psAnnee=paramsAnnee | AUTEUR psAnnee=paramsAnnee CONJET? AVOIR? TITRE ps=paramsMot) {
 		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT"));
 		req_arbre.ajouteFils(new Arbre("","titre.fichier"));
 		req_arbre.ajouteFils(new Arbre("","FROM date"));
@@ -86,6 +86,13 @@ requete returns [Arbre req_arbre = new Arbre("")]
 		req_arbre.ajouteFils(ps_arbre);
 		req_arbre.ajouteFils(new Arbre("","AND"));
 		ps_arbre = $psAnnee.les_pars_arbre;
+		req_arbre.ajouteFils(ps_arbre);
+	}
+	| RUBRIQUE ARTICLE AVOIR? MOT ps=paramsMot {
+		req_arbre.ajouteFils(new Arbre("","SELECT DISTINCT rubrique"));
+		req_arbre.ajouteFils(new Arbre("","FROM titretext"));
+		req_arbre.ajouteFils(new Arbre("","WHERE"));
+		ps_arbre = $ps.les_pars_arbre;
 		req_arbre.ajouteFils(ps_arbre);
 	}
 	// Je veux tous les bulletins sur le sujet X écrits en (telle année)

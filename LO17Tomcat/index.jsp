@@ -58,8 +58,8 @@
                         4. Les articles sur l'environnement écrites en 2012</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=combien+d'article+sur+l'inovation+ou+l'automovile">
                         5. combien d'article sur l'inovation ou l'automovile</a></li>
-                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
-                        6. Je veux les articles qui parlent d'airbus</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=afficher+la+list+des+rubbriques+des+articles+traitent+de+société">
+                        6. afficher la list des rubbriques des articles traitent de société</a></li>
                 </ul>
             </div>
         </form>
