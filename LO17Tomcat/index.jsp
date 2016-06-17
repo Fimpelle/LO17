@@ -52,16 +52,24 @@
                         1. Tous les articles</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Je+veux+les+articles+qui+parlent+d'airbus">
                         2. Je veux les articles qui parlent d'airbus</a></li>
-                    <li><a href="${pageContext.request.contextPath}servlet/LanceRequete?r=Combien+de+bulletin+parles+d'auromobile+%3F">
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Combien+de+bulletin+parles+d'auromobile+%3F">
                         3. Combien de bulletin parles d'auromobile ?</a></li>
-                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=r=Les+articles+sur+l'environnement+écrites+en+2012">
-                        4. Les articles sur l'environnement écrites en 2012</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=Les+articles+sur+l'environnement+&eacute;crites+en+2012">
+                        4. Les articles sur l'environnement &eacute;crites en 2012</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=combien+d'article+sur+l'inovation+ou+l'automovile">
                         5. combien d'article sur l'inovation ou l'automovile</a></li>
-                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=afficher+la+list+des+rubbriques+des+articles+traitent+de+société">
-                        6. afficher la list des rubbriques des articles traitent de société</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=afficher+la+list+des+rubbriques+des+articles+traitent+de+soci&eacute;t&eacute;">
+                        6. afficher la list des rubbriques des articles traitent de soci&eacute;t&eacute;</a></li>
                     <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=lister+les+articles+dont+la+rubrique+contient+innovation">
                         7. lister les articles dont la rubrique contient innovation</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=donne+moi+les+article+ayant+dans+leur+titre+'france'">
+                        8. donne moi les article ayant dans leur titre 'france'</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=donne+moi+les+article+ayant+dans+leur+titre+'france'+ou+'nanotechnologie'">
+                        9. donne moi les article ayant dans leur titre 'france' ou 'nanotechnologie'</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=articles+ayant+pour+sujet+industrie+&eacute;crits+entre+2011+et+2013">
+                        10. articles ayant pour sujet industrie &eacute;crits entre 2011 et 2013</a></li>
+                    <li><a href="${pageContext.request.contextPath}/servlet/LanceRequete?r=articles+ayant+&eacute;t&eacute;+&eacute;crit+entre+2011+et+2013+et+contenant+fauteuil">
+                        11. articles ayant &eacute;t&eacute; &eacute;crit entre 2011 et 2013 et contenant fauteuil</a></li>
                 </ul>
             </div>
         </form>

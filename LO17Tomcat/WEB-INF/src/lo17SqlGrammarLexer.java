@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g 2016-06-17 12:35:22
+// $ANTLR 3.5.1 C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g 2016-06-17 14:18:31
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -22,10 +22,9 @@ public class lo17SqlGrammarLexer extends Lexer {
 	public static final int MOT=15;
 	public static final int RUBRIQUE=16;
 	public static final int SELECT=17;
-	public static final int TEXTE=18;
-	public static final int TITRE=19;
-	public static final int VAR=20;
-	public static final int WS=21;
+	public static final int TITRE=18;
+	public static final int VAR=19;
+	public static final int WS=20;
 
 	// delegates
 	// delegators
@@ -320,33 +319,12 @@ public class lo17SqlGrammarLexer extends Lexer {
 	}
 	// $ANTLR end "TITRE"
 
-	// $ANTLR start "TEXTE"
-	public final void mTEXTE() throws RecognitionException {
-		try {
-			int _type = TEXTE;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:21:6: ( 'texte' )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:21:8: 'texte'
-			{
-			match("texte"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "TEXTE"
-
 	// $ANTLR start "RUBRIQUE"
 	public final void mRUBRIQUE() throws RecognitionException {
 		try {
 			int _type = RUBRIQUE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:9: ( 'categorie' | 'rubrique' | 'theme' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:21:9: ( 'categorie' | 'rubrique' | 'theme' )
 			int alt4=3;
 			switch ( input.LA(1) ) {
 			case 'c':
@@ -371,21 +349,21 @@ public class lo17SqlGrammarLexer extends Lexer {
 			}
 			switch (alt4) {
 				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:11: 'categorie'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:21:11: 'categorie'
 					{
 					match("categorie"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:25: 'rubrique'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:21:25: 'rubrique'
 					{
 					match("rubrique"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:38: 'theme'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:21:38: 'theme'
 					{
 					match("theme"); 
 
@@ -407,7 +385,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = AUTEUR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:7: ( 'auteur' | 'ecrire' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:7: ( 'auteur' | 'ecrire' )
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='a') ) {
@@ -425,14 +403,14 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt5) {
 				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:9: 'auteur'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:9: 'auteur'
 					{
 					match("auteur"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:20: 'ecrire'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:24:20: 'ecrire'
 					{
 					match("ecrire"); 
 
@@ -454,7 +432,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = DATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:5: ( 'quand' | 'quel date' | 'publi' | 'paraitre' | 'paru' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:5: ( 'quand' | 'quel date' | 'publi' | 'paraitre' | 'paru' )
 			int alt6=5;
 			int LA6_0 = input.LA(1);
 			if ( (LA6_0=='q') ) {
@@ -567,35 +545,35 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt6) {
 				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:7: 'quand'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:7: 'quand'
 					{
 					match("quand"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:17: 'quel date'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:17: 'quel date'
 					{
 					match("quel date"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:31: 'publi'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:31: 'publi'
 					{
 					match("publi"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:41: 'paraitre'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:41: 'paraitre'
 					{
 					match("paraitre"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:54: 'paru'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:27:54: 'paru'
 					{
 					match("paru"); 
 
@@ -617,8 +595,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = CONJET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:33:8: ( 'et' )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:33:10: 'et'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:8: ( 'et' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:30:10: 'et'
 			{
 			match("et"); 
 
@@ -638,8 +616,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = CONJOU;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:8: ( 'ou' )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:10: 'ou'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:33:8: ( 'ou' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:33:10: 'ou'
 			{
 			match("ou"); 
 
@@ -659,7 +637,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = MOT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:5: ( 'mot' | 'contenir' | 'parler' | 'trait' | 'compren' | 'sur' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:5: ( 'mot' | 'contenir' | 'parler' | 'trait' | 'sur' | 'texte' )
 			int alt7=6;
 			switch ( input.LA(1) ) {
 			case 'm':
@@ -669,44 +647,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 				break;
 			case 'c':
 				{
-				int LA7_2 = input.LA(2);
-				if ( (LA7_2=='o') ) {
-					int LA7_6 = input.LA(3);
-					if ( (LA7_6=='n') ) {
-						alt7=2;
-					}
-					else if ( (LA7_6=='m') ) {
-						alt7=5;
-					}
-
-					else {
-						int nvaeMark = input.mark();
-						try {
-							for (int nvaeConsume = 0; nvaeConsume < 3 - 1; nvaeConsume++) {
-								input.consume();
-							}
-							NoViableAltException nvae =
-								new NoViableAltException("", 7, 6, input);
-							throw nvae;
-						} finally {
-							input.rewind(nvaeMark);
-						}
-					}
-
-				}
-
-				else {
-					int nvaeMark = input.mark();
-					try {
-						input.consume();
-						NoViableAltException nvae =
-							new NoViableAltException("", 7, 2, input);
-						throw nvae;
-					} finally {
-						input.rewind(nvaeMark);
-					}
-				}
-
+				alt7=2;
 				}
 				break;
 			case 'p':
@@ -716,12 +657,31 @@ public class lo17SqlGrammarLexer extends Lexer {
 				break;
 			case 't':
 				{
-				alt7=4;
+				int LA7_4 = input.LA(2);
+				if ( (LA7_4=='r') ) {
+					alt7=4;
+				}
+				else if ( (LA7_4=='e') ) {
+					alt7=6;
+				}
+
+				else {
+					int nvaeMark = input.mark();
+					try {
+						input.consume();
+						NoViableAltException nvae =
+							new NoViableAltException("", 7, 4, input);
+						throw nvae;
+					} finally {
+						input.rewind(nvaeMark);
+					}
+				}
+
 				}
 				break;
 			case 's':
 				{
-				alt7=6;
+				alt7=5;
 				}
 				break;
 			default:
@@ -731,44 +691,44 @@ public class lo17SqlGrammarLexer extends Lexer {
 			}
 			switch (alt7) {
 				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:7: 'mot'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:7: 'mot'
 					{
 					match("mot"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:15: 'contenir'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:15: 'contenir'
 					{
 					match("contenir"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:28: 'parler'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:28: 'parler'
 					{
 					match("parler"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:39: 'trait'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:39: 'trait'
 					{
 					match("trait"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:49: 'compren'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:48: 'sur'
 					{
-					match("compren"); 
+					match("sur"); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:61: 'sur'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:36:56: 'texte'
 					{
-					match("sur"); 
+					match("texte"); 
 
 					}
 					break;
@@ -788,8 +748,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = ENTRE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:42:7: ( 'entre' )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:42:9: 'entre'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:7: ( 'entre' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:39:9: 'entre'
 			{
 			match("entre"); 
 
@@ -809,8 +769,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = AVOIR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:7: ( 'avoir' )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:9: 'avoir'
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:42:7: ( 'avoir' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:42:9: 'avoir'
 			{
 			match("avoir"); 
 
@@ -830,7 +790,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:5: ( ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' ) | '\\n' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:5: ( ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' ) | '\\n' )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='\t'||LA9_0=='\r'||LA9_0==' '||LA9_0=='d'||LA9_0=='j'||LA9_0=='q') ) {
@@ -848,9 +808,9 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
 					{
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:7: ( ' ' | '\\t' | '\\r' | 'je' | 'qui' | 'dont' )
 					int alt8=6;
 					switch ( input.LA(1) ) {
 					case ' ':
@@ -890,39 +850,39 @@ public class lo17SqlGrammarLexer extends Lexer {
 					}
 					switch (alt8) {
 						case 1 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:8: ' '
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:8: ' '
 							{
 							match(' '); 
 							}
 							break;
 						case 2 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:13: '\\t'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:13: '\\t'
 							{
 							match('\t'); 
 							}
 							break;
 						case 3 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:20: '\\r'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:20: '\\r'
 							{
 							match('\r'); 
 							}
 							break;
 						case 4 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:27: 'je'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:27: 'je'
 							{
 							match("je"); 
 
 							}
 							break;
 						case 5 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:34: 'qui'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:34: 'qui'
 							{
 							match("qui"); 
 
 							}
 							break;
 						case 6 :
-							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:42: 'dont'
+							// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:42: 'dont'
 							{
 							match("dont"); 
 
@@ -935,7 +895,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:62: '\\n'
+					// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:45:62: '\\n'
 					{
 					match('\n'); 
 					}
@@ -956,8 +916,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:51:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:51:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:5: ( ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+ )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:7: ( 'A' .. 'Z' | 'a' .. 'z' | '\\u00a0' .. '\\u00ff' ) ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z')||(input.LA(1) >= '\u00A0' && input.LA(1) <= '\u00FF') ) {
 				input.consume();
@@ -967,7 +927,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:51:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:48:47: ( ( 'a' .. 'z' ) | ( '0' .. '9' ) | '-' | ( '\\u00a0' .. '\\u00ff' ) )+
 			int cnt10=0;
 			loop10:
 			while (true) {
@@ -1016,8 +976,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 		try {
 			int _type = ANNEE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:54:9: ( ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' ) )
-			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:54:12: ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:51:9: ( ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' ) )
+			// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:51:12: ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' ) ( '0' .. '9' )
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 				input.consume();
@@ -1064,8 +1024,8 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:8: ( SELECT | EVERY | COUNT | ARTICLE | BULLETIN | TITRE | TEXTE | RUBRIQUE | AUTEUR | DATE | CONJET | CONJOU | MOT | ENTRE | AVOIR | WS | VAR | ANNEE )
-		int alt11=18;
+		// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:8: ( SELECT | EVERY | COUNT | ARTICLE | BULLETIN | TITRE | RUBRIQUE | AUTEUR | DATE | CONJET | CONJOU | MOT | ENTRE | AVOIR | WS | VAR | ANNEE )
+		int alt11=17;
 		alt11 = dfa11.predict(input);
 		switch (alt11) {
 			case 1 :
@@ -1111,84 +1071,77 @@ public class lo17SqlGrammarLexer extends Lexer {
 				}
 				break;
 			case 7 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:52: TEXTE
-				{
-				mTEXTE(); 
-
-				}
-				break;
-			case 8 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:58: RUBRIQUE
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:52: RUBRIQUE
 				{
 				mRUBRIQUE(); 
 
 				}
 				break;
-			case 9 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:67: AUTEUR
+			case 8 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:61: AUTEUR
 				{
 				mAUTEUR(); 
 
 				}
 				break;
-			case 10 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:74: DATE
+			case 9 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:68: DATE
 				{
 				mDATE(); 
 
 				}
 				break;
-			case 11 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:79: CONJET
+			case 10 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:73: CONJET
 				{
 				mCONJET(); 
 
 				}
 				break;
-			case 12 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:86: CONJOU
+			case 11 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:80: CONJOU
 				{
 				mCONJOU(); 
 
 				}
 				break;
-			case 13 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:93: MOT
+			case 12 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:87: MOT
 				{
 				mMOT(); 
 
 				}
 				break;
-			case 14 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:97: ENTRE
+			case 13 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:91: ENTRE
 				{
 				mENTRE(); 
 
 				}
 				break;
-			case 15 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:103: AVOIR
+			case 14 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:97: AVOIR
 				{
 				mAVOIR(); 
 
 				}
 				break;
-			case 16 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:109: WS
+			case 15 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:103: WS
 				{
 				mWS(); 
 
 				}
 				break;
-			case 17 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:112: VAR
+			case 16 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:106: VAR
 				{
 				mVAR(); 
 
 				}
 				break;
-			case 18 :
-				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:116: ANNEE
+			case 17 :
+				// C:\\Users\\JeanV\\Documents\\ETUDES\\GI05\\LO17\\projet\\LO17\\LO17Tomcat\\WEB-INF\\src\\lo17SqlGrammar.g:1:110: ANNEE
 				{
 				mANNEE(); 
 
@@ -1201,52 +1154,52 @@ public class lo17SqlGrammarLexer extends Lexer {
 
 	protected DFA11 dfa11 = new DFA11(this);
 	static final String DFA11_eotS =
-		"\24\uffff\26\22\1\114\3\22\1\120\1\22\1\20\20\22\1\20\10\22\1\154\1\22"+
-		"\1\uffff\3\22\1\uffff\1\154\7\22\1\172\6\22\1\20\1\u0082\12\22\1\uffff"+
-		"\4\22\1\u0081\5\22\1\u0096\1\22\1\154\1\uffff\1\u0098\1\u0099\1\u009a"+
-		"\3\22\2\uffff\1\u0081\5\22\1\u0082\2\22\1\u0098\1\22\1\u00a6\1\u0081\5"+
-		"\22\1\u00ac\1\uffff\1\u0082\3\uffff\2\22\1\u0082\5\22\1\u00b4\1\22\1\u00ac"+
-		"\1\uffff\1\22\1\154\1\u0082\1\22\1\u00b8\1\uffff\2\22\1\u0082\1\u00b4"+
-		"\1\154\2\22\1\uffff\2\22\1\u0082\1\uffff\1\22\1\u009a\1\154\1\22\1\u00c1"+
-		"\1\u0081\1\u0082\1\u009a\1\uffff";
+		"\24\uffff\26\22\1\114\3\22\1\120\1\22\1\20\20\22\1\20\10\22\1\153\1\22"+
+		"\1\uffff\3\22\1\uffff\1\153\7\22\1\171\6\22\1\20\1\u0081\11\22\1\uffff"+
+		"\4\22\1\u0080\5\22\1\u0094\1\22\1\153\1\uffff\1\u0096\1\u0097\1\153\3"+
+		"\22\2\uffff\1\u0080\4\22\1\u0081\2\22\1\u0096\1\22\1\u00a2\1\u0080\5\22"+
+		"\1\u00a8\1\uffff\1\u0081\2\uffff\2\22\1\u0081\4\22\1\u00af\1\22\1\u00a8"+
+		"\1\uffff\1\22\1\153\1\u0081\1\22\1\u00b3\1\uffff\2\22\1\u0081\1\u00af"+
+		"\2\22\1\uffff\2\22\1\u0081\1\uffff\1\22\1\u0097\1\153\1\22\1\u00bc\1\u0080"+
+		"\1\u0081\1\u0097\1\uffff";
 	static final String DFA11_eofS =
-		"\u00c2\uffff";
+		"\u00bd\uffff";
 	static final String DFA11_minS =
 		"\1\11\17\55\1\uffff\1\55\2\uffff\1\165\1\146\2\164\1\157\1\141\1\165\1"+
-		"\164\1\170\1\145\1\143\1\142\1\156\1\141\1\145\1\155\1\164\1\163\1\155"+
+		"\164\1\145\1\170\1\143\1\142\1\156\1\141\1\145\1\155\1\164\1\163\1\155"+
 		"\1\154\1\152\1\162\1\55\1\164\1\142\1\162\1\55\1\164\1\55\1\154\2\151"+
-		"\1\145\1\151\1\165\1\151\1\163\1\162\1\164\1\155\1\165\1\162\1\156\1\154"+
+		"\1\145\1\151\1\165\1\151\1\163\1\162\1\155\1\164\1\165\1\162\1\156\1\154"+
 		"\1\156\1\55\1\162\1\142\1\164\1\145\1\164\1\142\1\154\1\145\1\55\1\151"+
 		"\1\uffff\1\162\1\154\1\141\1\uffff\1\55\1\157\2\143\1\165\1\162\1\166"+
-		"\1\164\1\55\3\145\1\160\1\151\1\145\1\55\1\40\1\144\1\143\1\151\1\162"+
-		"\1\145\1\147\1\145\1\162\1\145\1\164\1\uffff\1\162\1\145\2\151\1\55\1"+
-		"\145\1\151\1\150\1\154\1\162\1\55\1\145\1\55\1\uffff\3\55\1\145\1\161"+
-		"\1\162\2\uffff\1\55\1\150\2\145\1\156\1\157\1\55\1\145\1\164\1\55\1\145"+
-		"\2\55\1\164\2\162\2\145\1\55\1\uffff\1\55\3\uffff\1\162\1\165\1\55\1\145"+
-		"\2\156\1\151\1\162\1\55\1\151\1\55\1\uffff\1\162\2\55\1\162\1\55\1\uffff"+
-		"\2\145\3\55\1\162\1\151\1\uffff\1\156\1\145\1\55\1\uffff\1\162\2\55\1"+
+		"\1\164\1\55\3\145\1\160\1\151\1\145\1\55\1\40\1\144\1\143\1\151\1\145"+
+		"\1\147\1\145\1\162\1\145\1\164\1\uffff\1\162\1\145\2\151\1\55\1\145\1"+
+		"\151\1\150\1\154\1\162\1\55\1\145\1\55\1\uffff\3\55\1\145\1\161\1\162"+
+		"\2\uffff\1\55\1\150\1\145\1\156\1\157\1\55\1\145\1\164\1\55\1\145\2\55"+
+		"\1\164\2\162\2\145\1\55\1\uffff\1\55\2\uffff\1\162\1\165\1\55\1\145\1"+
+		"\156\1\151\1\162\1\55\1\151\1\55\1\uffff\1\162\2\55\1\162\1\55\1\uffff"+
+		"\2\145\2\55\1\162\1\151\1\uffff\1\156\1\145\1\55\1\uffff\1\162\2\55\1"+
 		"\145\4\55\1\uffff";
 	static final String DFA11_maxS =
 		"\20\u00ff\1\uffff\1\u00ff\2\uffff\1\165\1\146\2\164\2\157\1\165\1\164"+
-		"\1\170\1\145\1\143\1\142\1\156\1\151\1\145\1\156\1\164\1\163\1\155\1\154"+
+		"\1\145\1\170\1\143\1\142\1\156\1\151\1\145\1\156\1\164\1\163\1\155\1\154"+
 		"\2\162\1\u00ff\1\164\1\142\1\162\1\u00ff\1\164\1\u00ff\1\154\2\151\1\145"+
-		"\1\151\1\165\1\151\1\163\1\162\1\164\1\155\1\165\1\162\1\164\1\154\1\156"+
-		"\1\u00ff\1\162\1\160\1\164\1\145\1\164\1\142\1\154\1\145\1\u00ff\1\151"+
+		"\1\151\1\165\1\151\1\163\1\162\1\155\1\164\1\165\1\162\1\164\1\154\1\156"+
+		"\1\u00ff\1\162\1\142\1\164\1\145\1\164\1\142\1\154\1\145\1\u00ff\1\151"+
 		"\1\uffff\1\162\1\154\1\165\1\uffff\1\u00ff\1\157\2\143\1\165\1\162\1\166"+
-		"\1\164\1\u00ff\3\145\1\160\1\151\1\145\2\u00ff\1\144\1\143\1\151\1\162"+
-		"\1\145\1\147\1\145\1\162\1\145\1\164\1\uffff\1\162\1\145\2\151\1\u00ff"+
-		"\1\145\1\151\1\150\1\154\1\162\1\u00ff\1\145\1\u00ff\1\uffff\3\u00ff\1"+
-		"\145\1\161\1\162\2\uffff\1\u00ff\1\150\2\145\1\156\1\157\1\u00ff\1\145"+
-		"\1\164\1\u00ff\1\145\2\u00ff\1\164\2\162\2\145\1\u00ff\1\uffff\1\u00ff"+
-		"\3\uffff\1\162\1\165\1\u00ff\1\145\2\156\1\151\1\162\1\u00ff\1\151\1\u00ff"+
-		"\1\uffff\1\162\2\u00ff\1\162\1\u00ff\1\uffff\2\145\3\u00ff\1\162\1\151"+
-		"\1\uffff\1\156\1\145\1\u00ff\1\uffff\1\162\2\u00ff\1\145\4\u00ff\1\uffff";
+		"\1\164\1\u00ff\3\145\1\160\1\151\1\145\2\u00ff\1\144\1\143\1\151\1\145"+
+		"\1\147\1\145\1\162\1\145\1\164\1\uffff\1\162\1\145\2\151\1\u00ff\1\145"+
+		"\1\151\1\150\1\154\1\162\1\u00ff\1\145\1\u00ff\1\uffff\3\u00ff\1\145\1"+
+		"\161\1\162\2\uffff\1\u00ff\1\150\1\145\1\156\1\157\1\u00ff\1\145\1\164"+
+		"\1\u00ff\1\145\2\u00ff\1\164\2\162\2\145\1\u00ff\1\uffff\1\u00ff\2\uffff"+
+		"\1\162\1\165\1\u00ff\1\145\1\156\1\151\1\162\1\u00ff\1\151\1\u00ff\1\uffff"+
+		"\1\162\2\u00ff\1\162\1\u00ff\1\uffff\2\145\2\u00ff\1\162\1\151\1\uffff"+
+		"\1\156\1\145\1\u00ff\1\uffff\1\162\2\u00ff\1\145\4\u00ff\1\uffff";
 	static final String DFA11_acceptS =
-		"\20\uffff\1\20\1\uffff\1\21\1\22\70\uffff\1\13\3\uffff\1\14\33\uffff\1"+
-		"\15\15\uffff\1\2\6\uffff\1\12\1\1\23\uffff\1\17\1\uffff\1\6\1\7\1\10\13"+
-		"\uffff\1\16\5\uffff\1\11\7\uffff\1\3\3\uffff\1\4\10\uffff\1\5";
+		"\20\uffff\1\17\1\uffff\1\20\1\21\70\uffff\1\12\3\uffff\1\13\32\uffff\1"+
+		"\14\15\uffff\1\2\6\uffff\1\11\1\1\22\uffff\1\16\1\uffff\1\6\1\7\12\uffff"+
+		"\1\15\5\uffff\1\10\6\uffff\1\3\3\uffff\1\4\10\uffff\1\5";
 	static final String DFA11_specialS =
-		"\u00c2\uffff}>";
+		"\u00bd\uffff}>";
 	static final String[] DFA11_transitionS = {
 			"\2\20\2\uffff\1\20\22\uffff\1\20\17\uffff\12\23\7\uffff\32\22\6\uffff"+
 			"\1\2\1\12\1\7\1\5\1\14\4\22\1\21\1\22\1\10\1\17\1\11\1\16\1\15\1\6\1"+
@@ -1254,7 +1207,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 			"\1\22\2\uffff\12\22\47\uffff\16\22\1\24\13\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\5\22\1\25\13\22\1\26\2\22\1\27\1\30\4\22"+
 			"\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\4\22\1\34\2\22\1\35\1\33\5\22\1\32\2\22"+
+			"\1\22\2\uffff\12\22\47\uffff\4\22\1\35\2\22\1\34\1\33\5\22\1\32\2\22"+
 			"\1\31\10\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\4\22\1\36\17\22\1\37\5\22\45\uffff\140"+
 			"\22",
@@ -1322,37 +1275,38 @@ public class lo17SqlGrammarLexer extends Lexer {
 			"\1\142",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\143",
-			"\1\144\15\uffff\1\145",
+			"\1\144",
+			"\1\145",
 			"\1\146",
 			"\1\147",
 			"\1\150",
 			"\1\151",
 			"\1\152",
-			"\1\153",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\154",
+			"",
 			"\1\155",
-			"",
 			"\1\156",
-			"\1\157",
-			"\1\160\12\uffff\1\162\10\uffff\1\161",
+			"\1\157\12\uffff\1\161\10\uffff\1\160",
 			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\162",
 			"\1\163",
 			"\1\164",
 			"\1\165",
 			"\1\166",
 			"\1\167",
 			"\1\170",
-			"\1\171",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\172",
 			"\1\173",
 			"\1\174",
 			"\1\175",
 			"\1\176",
 			"\1\177",
-			"\1\u0080",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u0081\14\uffff\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u0080\14\uffff\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u0082",
 			"\1\u0083",
 			"\1\u0084",
 			"\1\u0085",
@@ -1361,89 +1315,83 @@ public class lo17SqlGrammarLexer extends Lexer {
 			"\1\u0088",
 			"\1\u0089",
 			"\1\u008a",
+			"",
 			"\1\u008b",
 			"\1\u008c",
-			"",
 			"\1\u008d",
 			"\1\u008e",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u008f",
 			"\1\u0090",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u0091",
 			"\1\u0092",
 			"\1\u0093",
-			"\1\u0094",
-			"\1\u0095",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u0097",
+			"\1\u0095",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u0098",
+			"\1\u0099",
+			"\1\u009a",
+			"",
+			"",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u009b",
 			"\1\u009c",
 			"\1\u009d",
-			"",
-			"",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u009e",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u009f",
 			"\1\u00a0",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a1",
-			"\1\u00a2",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a3",
 			"\1\u00a4",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00a5",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u00a6",
 			"\1\u00a7",
-			"\1\u00a8",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"",
+			"",
 			"\1\u00a9",
 			"\1\u00aa",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00ab",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
-			"",
-			"",
+			"\1\u00ac",
 			"\1\u00ad",
 			"\1\u00ae",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u00af",
 			"\1\u00b0",
-			"\1\u00b1",
-			"\1\u00b2",
-			"\1\u00b3",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"",
+			"\1\u00b1",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"\1\u00b2",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
+			"",
+			"\1\u00b4",
 			"\1\u00b5",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
+			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00b6",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00b7",
+			"",
+			"\1\u00b8",
+			"\1\u00b9",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"",
-			"\1\u00b9",
 			"\1\u00ba",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\u00bb",
-			"\1\u00bc",
-			"",
-			"\1\u00bd",
-			"\1\u00be",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"",
-			"\1\u00bf",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
-			"\1\u00c0",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
 			"\1\22\2\uffff\12\22\47\uffff\32\22\45\uffff\140\22",
@@ -1482,7 +1430,7 @@ public class lo17SqlGrammarLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( SELECT | EVERY | COUNT | ARTICLE | BULLETIN | TITRE | TEXTE | RUBRIQUE | AUTEUR | DATE | CONJET | CONJOU | MOT | ENTRE | AVOIR | WS | VAR | ANNEE );";
+			return "1:1: Tokens : ( SELECT | EVERY | COUNT | ARTICLE | BULLETIN | TITRE | RUBRIQUE | AUTEUR | DATE | CONJET | CONJOU | MOT | ENTRE | AVOIR | WS | VAR | ANNEE );";
 		}
 	}
 
